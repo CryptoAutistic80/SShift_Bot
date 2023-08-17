@@ -1,3 +1,5 @@
+#Config
+
 TRANSLATE_CONFIG = {
     1081674998256775239: {
         'channels': [1112510368879743146]
