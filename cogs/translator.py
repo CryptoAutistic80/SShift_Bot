@@ -119,8 +119,7 @@ class TranslationCog(commands.Cog):
 
                 system_prompt = (
                     "Your singular purpose is to translate any non-English language you receive into perfect English, "
-                    "while ensuring you maintain and accurately represent any cultural nuances expressed in the original text."
-                    "If a message makes no sense just state that fact."
+                    "while ensuring you maintain and accurately represent any cultural nuances and slang expressed in the original text."
                 )
 
                 chat_message = [
@@ -129,7 +128,7 @@ class TranslationCog(commands.Cog):
                 ]
 
                 response = openai.ChatCompletion.create(
-                    model="gpt-4",
+                    model="gpt-3.5-turbo",
                     messages=chat_message,
                     temperature=0.2,
                     max_tokens=500,
