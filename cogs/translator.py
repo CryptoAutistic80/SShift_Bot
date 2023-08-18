@@ -20,49 +20,60 @@ def preprocess_message(text):
     return cleaned_text.strip()
 
 def should_translate(text):
+    print(f"Debug: Text being passed to should_translate: {text}")
     cleaned_text = preprocess_message(text)
 
     # If the cleaned message is empty, don't translate
     if not cleaned_text:
+        print("Debug: Message is empty.")
+        return False
+
+    # Return False immediately if the message is in English
+    if is_english(cleaned_text):
+        print("Debug: Message is in English.")
         return False
 
     # Check for non-Latin scripts
     non_latin_patterns = [
-        r'[\\u0600-\\u06FF]',  # Arabic
-        r'[\\u0980-\\u09FF]',  # Bengali
-        r'[\\u4E00-\\u9FFF\\U00020000-\\U0002A6DF]',  # Chinese
-        r'[\\u0400-\\u04FF]',  # Cyrillic
-        r'[\\u0900-\\u097F]',  # Devanagari
-        r'[\\u0370-\\u03FF]',  # Greek
-        r'[\\u0A80-\\u0AFF]',  # Gujarati
-        r'[\\u0A00-\\u0A7F]',  # Gurmukhi
-        r'[\\u0590-\\u05FF]',  # Hebrew
-        r'[\\u3040-\\u30ff\\u3400-\\u4DBF]',  # Japanese
-        r'[\\u0C80-\\u0CFF]',  # Kannada
-        r'[\\uAC00-\\uD7AF]',  # Korean
-        r'[\\u0D00-\\u0D7F]',  # Malayalam
-        r'[\\u0B00-\\u0B7F]',  # Oriya (Odia)
-        r'[\\u0D80-\\u0DFF]',  # Sinhala
-        r'[\\u0B80-\\u0BFF]',  # Tamil
-        r'[\\u0C00-\\u0C7F]',  # Telugu
-        r'[\\u0E00-\\u0E7F]',  # Thai
-        r'[\\u0F00-\\u0FFF]'   # Tibetan
+        r'[\u0600-ۿ]',  # Arabic
+        r'[ঀ-\u09ff]',  # Bengali
+        r'[一-\u9fff𠀀-\U0002a6df]',  # Chinese
+        r'[Ѐ-ӿ]',  # Cyrillic
+        r'[ऀ-ॿ]',  # Devanagari
+        r'[Ͱ-Ͽ]',  # Greek
+        r'[\u0a80-૿]',  # Gujarati
+        r'[\u0a00-\u0a7f]',  # Gurmukhi
+        r'[\u0590-\u05ff]',  # Hebrew
+        r'[\u3040-ヿ㐀-\u4dbf]',  # Japanese
+        r'[ಀ-\u0cff]',  # Kannada
+        r'[가-\ud7af]',  # Korean
+        r'[ഀ-ൿ]',  # Malayalam
+        r'[\u0b00-\u0b7f]',  # Oriya (Odia)
+        r'[\u0d80-\u0dff]',  # Sinhala
+        r'[\u0b80-\u0bff]',  # Tamil
+        r'[ఀ-౿]',  # Telugu
+        r'[\u0e00-\u0e7f]',  # Thai
+        r'[ༀ-\u0fff]'   # Tibetan
     ]
     for pattern in non_latin_patterns:
         if re.search(pattern, cleaned_text):
+            print("Debug: Message contains non-Latin scripts.")
             return True
 
     # Check for minimum number of words on cleaned text
-    if len(cleaned_text.split()) < 3:
+    if len(cleaned_text.split()) < 5:
+        print("Debug: Message has less than 5 words.")
         return False
     
     # Check for URLs on cleaned text
     url_regex = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\\\(\\\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
     if re.search(url_regex, cleaned_text):
+        print("Debug: Message contains a URL.")
         return False
 
-    # Return False if the message is in English
-    return not is_english(cleaned_text)
+    print("Debug: Message passed all checks and will be translated.")
+    return True
+
 
 class TranslationButton(nextcord.ui.Button):
     def __init__(self, message_id, *args, **kwargs):
@@ -106,11 +117,21 @@ class TranslationCog(commands.Cog):
                 dummy_view = TranslationView(self, message_id=message.id, timeout=None)
                 dummy_message = await message.channel.send("", view=dummy_view)
 
-                chat_message = [{"role": "user", "content": f"Translate the following to English: '{message.content}'"}]
+                system_prompt = (
+                    "Your singular purpose is to translate any non-English language you receive into perfect English, "
+                    "while ensuring you maintain and accurately represent any cultural nuances expressed in the original text."
+                    "If a message makes no sense just state that fact."
+                )
+
+                chat_message = [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": f"Translate the following to English: '{message.content}'"}
+                ]
+
                 response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model="gpt-4",
                     messages=chat_message,
-                    temperature=0.1,
+                    temperature=0.2,
                     max_tokens=500,
                     frequency_penalty=0.0
                 )
