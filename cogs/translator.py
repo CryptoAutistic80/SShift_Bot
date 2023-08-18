@@ -53,7 +53,7 @@ def should_translate(text):
             return True
 
     # Check for minimum number of words on cleaned text
-    if len(cleaned_text.split()) < 2:
+    if len(cleaned_text.split()) < 3:
         return False
     
     # Check for URLs on cleaned text
@@ -117,15 +117,10 @@ class TranslationCog(commands.Cog):
                 translation = response['choices'][0]['message']['content'].strip()
                 await insert_translation(str(message.id), translation)
                 
-                # Send an empty message with just the 'Translation' button below the original message
-                view = TranslationView(self, message_id=message.id, timeout=None)
-                
                 # Edit the dummy button's label to "View Translation" and activate its functionality
                 dummy_view.clear_items()
                 dummy_view.add_item(TranslationButton(message_id=message.id, label="View Translation", style=nextcord.ButtonStyle.grey))
                 await dummy_message.edit(view=dummy_view)
-
-                # Removed the original button creation line
 
     def cog_unload(self):
         self.cleanup_task.cancel()

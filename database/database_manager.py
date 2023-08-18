@@ -1,7 +1,7 @@
 import aiosqlite
 
 # Define the path for the SQLite database
-db_path = "database/database.db"
+db_path = "database/translations_database.db"
 
 async def initialize_db():
     """Initialize the database and create tables if they don't exist."""
