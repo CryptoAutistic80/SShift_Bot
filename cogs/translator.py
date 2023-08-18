@@ -5,6 +5,7 @@ import os
 import re
 import langid
 from config import TRANSLATE_CONFIG
+from database.database_manager import insert_translation, retrieve_translation, delete_old_translations
 
 # Initialize the OpenAI API
 openai.api_key = os.environ['Key_OpenAI']
@@ -63,14 +64,15 @@ def should_translate(text):
     # Return False if the message is in English
     return not is_english(cleaned_text)
 
-
 class TranslationButton(nextcord.ui.Button):
     def __init__(self, message_id, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.message_id = message_id
 
     async def callback(self, interaction: nextcord.Interaction):
-        translation = self.view.cog.translations.get(self.message_id, "Translation not found.")
+        translation = await retrieve_translation(str(self.message_id))
+        if not translation:
+            translation = "Translation not found."
         # Send the translation as an ephemeral message
         await interaction.response.send_message(translation, ephemeral=True)
 
@@ -83,19 +85,20 @@ class TranslationView(nextcord.ui.View):
 class TranslationCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.translations = {}  # Dictionary to store translations
+        self.translations = {}  # Dictionary to store translations (no longer needed but kept for reference)
         self.cleanup_task = self.clean_translations.start()
 
-    @tasks.loop(hours=1)
+    @tasks.loop(hours=12)
     async def clean_translations(self):
-        """Cleanup task to remove translations older than 1 hour."""
-        self.translations = {}
+        """Cleanup task to remove translations older than 12 hours."""
+        await delete_old_translations()
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        await self.bot.process_commands(message)
         guild_id = message.guild.id
         channel_id = message.channel.id
-        
+            
         # Check if the message's guild and channel IDs match the TRANSLATE_CONFIG
         if guild_id in TRANSLATE_CONFIG and channel_id in TRANSLATE_CONFIG[guild_id]['channels'] and not message.author.bot:
             if should_translate(message.content):
@@ -108,7 +111,7 @@ class TranslationCog(commands.Cog):
                     frequency_penalty=0.0
                 )
                 translation = response['choices'][0]['message']['content'].strip()
-                self.translations[message.id] = translation
+                await insert_translation(str(message.id), translation)
                 
                 # Send an empty message with just the 'Translation' button below the original message
                 view = TranslationView(self, message_id=message.id, timeout=None)
