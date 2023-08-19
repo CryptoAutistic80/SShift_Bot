@@ -6,7 +6,7 @@ import os
 import re
 import langid
 from config import TRANSLATE_CONFIG
-from database.database_manager import insert_translation, retrieve_translation, delete_old_translations
+from database.database_manager import insert_translation, retrieve_translation, delete_old_translations, retrieve_translation_by_original_message_id
 from datetime import datetime
 
 # Initialize the OpenAI API
@@ -156,6 +156,19 @@ class TranslationCog(commands.Cog):
     
                 # This line is where you create the task to disable the button after 1 minute
                 self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
+
+    
+    @nextcord.slash_command(description="Fetch the translation for a replied message")
+    async def fetch(self, interaction: nextcord.Interaction):
+        # Check if the interaction is in reply to an existing message
+        if interaction.message_reference:
+            original_message_id = interaction.message_reference.message_id
+            # Fetch the translation from the database
+            translation = retrieve_translation_by_original_message_id(original_message_id)
+            # If a translation exists, send it as an ephemeral message
+            if translation:
+                await interaction.response.send_message(translation, ephemeral=True)
+
 
     def cog_unload(self):
         self.cleanup_task.cancel()

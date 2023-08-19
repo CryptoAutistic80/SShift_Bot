@@ -40,4 +40,12 @@ async def delete_old_translations(hours=12):
         await cursor.execute("DELETE FROM translations WHERE timestamp < datetime('now', '-{} hours')".format(hours))
         await db.commit()
 
+async def retrieve_translation_by_original_message_id(original_message_id):
+    """Retrieve a translation from the database based on the original_message_id."""
+    async with aiosqlite.connect(db_path) as db:
+        cursor = await db.cursor()
+        await cursor.execute("SELECT translation FROM translations WHERE original_message_id = ?", (original_message_id,))
+        translation = await cursor.fetchone()
+        return translation[0] if translation else None
+
 # You can call initialize_db() when your bot starts to ensure the table exists.
