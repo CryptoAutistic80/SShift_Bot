@@ -42,14 +42,11 @@ async def on_ready():
             bot.load_extension('cogs.translator')
             loaded_cogs.add('cogs.translator')
 
-        if guild.id in TRANSLATE_CONFIG and 'cogs.commands' not in loaded_cogs:
-            bot.load_extension('cogs.commands')
-            loaded_cogs.add('cogs.commands')
-
 # Start the FastAPI server to keep the Replit project awake
 start_server()
 
-# Run the bot
+# Load the cogs.commands extension before the bot runs
+bot.load_extension('cogs.commands')
 bot.run(os.getenv('DISCORD_TOKEN'))
 
 
