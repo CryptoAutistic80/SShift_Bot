@@ -119,7 +119,7 @@ class TranslationCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-       ## await self.bot.process_commands(message)
+        # await self.bot.process_commands(message)  # Removed to avoid double processing
         guild_id = message.guild.id
         channel_id = message.channel.id
             
