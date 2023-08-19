@@ -1,11 +1,13 @@
 import nextcord
 from nextcord.ext import commands, tasks
+import asyncio
 import openai
 import os
 import re
 import langid
 from config import TRANSLATE_CONFIG
 from database.database_manager import insert_translation, retrieve_translation, delete_old_translations
+from datetime import datetime
 
 # Initialize the OpenAI API
 openai.api_key = os.environ['Key_OpenAI']
@@ -23,12 +25,10 @@ def should_translate(text):
     print(f"Debug: Text being passed to should_translate: {text}")
     cleaned_text = preprocess_message(text)
 
-    # If the cleaned message is empty, don't translate
     if not cleaned_text:
         print("Debug: Message is empty.")
         return False
 
-    # Return False immediately if the message is in English
     if is_english(cleaned_text):
         print("Debug: Message is in English.")
         return False
@@ -60,12 +60,10 @@ def should_translate(text):
             print("Debug: Message contains non-Latin scripts.")
             return True
 
-    # Check for minimum number of words on cleaned text
     if len(cleaned_text.split()) < 5:
         print("Debug: Message has less than 5 words.")
         return False
     
-    # Check for URLs on cleaned text
     url_regex = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\\\(\\\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
     if re.search(url_regex, cleaned_text):
         print("Debug: Message contains a URL.")
@@ -74,18 +72,17 @@ def should_translate(text):
     print("Debug: Message passed all checks and will be translated.")
     return True
 
-
 class TranslationButton(nextcord.ui.Button):
     def __init__(self, message_id, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.message_id = message_id
 
     async def callback(self, interaction: nextcord.Interaction):
+        await interaction.response.defer()
         translation = await retrieve_translation(str(self.message_id))
         if not translation:
             translation = "Translation not found."
-        # Send the translation as an ephemeral message
-        await interaction.response.send_message(translation, ephemeral=True)
+        await interaction.followup.send(translation, ephemeral=True)
 
 class TranslationView(nextcord.ui.View):
     def __init__(self, cog, message_id, *args, **kwargs):
@@ -101,8 +98,24 @@ class TranslationCog(commands.Cog):
 
     @tasks.loop(hours=12)
     async def clean_translations(self):
-        # Cleanup task to remove translations older than 12 hours.
         await delete_old_translations()
+
+    async def disable_button(self, message_id: int, channel_id: int):
+        print(f"[{datetime.now()}] Started 1-minute wait for message ID: {message_id}")  # Debug with timestamp
+        await asyncio.sleep(60)  # 1 minute for testing
+    
+        channel = self.bot.get_channel(channel_id)
+        if not channel:
+            print(f"Failed to fetch channel with ID: {channel_id}")
+            return
+    
+        message = await channel.fetch_message(message_id)
+        if not message:
+            print(f"Failed to fetch message with ID: {message_id}")
+            return
+    
+        await message.delete()  # This line deletes the message containing the button
+        print(f"[{datetime.now()}] Deleted message with ID: {message_id}")  #deletion confirmed
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -141,6 +154,9 @@ class TranslationCog(commands.Cog):
                 dummy_view.clear_items()
                 dummy_view.add_item(TranslationButton(message_id=message.id, label="View Translation", style=nextcord.ButtonStyle.grey))
                 await dummy_message.edit(view=dummy_view)
+
+                # This line is where you create the task to disable the button after 1 minute
+                self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
 
     def cog_unload(self):
         self.cleanup_task.cancel()
