@@ -12,16 +12,17 @@ async def initialize_db():
                 id INTEGER PRIMARY KEY,
                 button_id TEXT NOT NULL UNIQUE,
                 translation TEXT NOT NULL,
-                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                original_message_id TEXT NOT NULL
             );
         """)
         await db.commit()
 
-async def insert_translation(button_id, translation):
+async def insert_translation(button_id, translation, original_message_id):
     """Insert a new translation into the database."""
     async with aiosqlite.connect(db_path) as db:
         cursor = await db.cursor()
-        await cursor.execute("INSERT OR REPLACE INTO translations (button_id, translation) VALUES (?, ?)", (button_id, translation))
+        await cursor.execute("INSERT OR REPLACE INTO translations (button_id, translation, original_message_id) VALUES (?, ?, ?)", (button_id, translation, original_message_id))
         await db.commit()
 
 async def retrieve_translation(button_id):
