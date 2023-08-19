@@ -22,6 +22,7 @@ async def on_ready():
     for guild in bot.guilds:
         if guild.id in TRANSLATE_CONFIG:
             bot.load_extension('cogs.translator')
+            bot.load_extension('cogs.commands')
             break  # Exit loop once the translator cog is loaded
 
 # Start the FastAPI server to keep the Replit project awake
@@ -29,6 +30,7 @@ start_server()
 
 # Run the bot
 bot.run(os.getenv('DISCORD_TOKEN'))
+
 
 
 
