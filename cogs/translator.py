@@ -12,24 +12,24 @@ from datetime import datetime
 # Initialize the OpenAI API
 openai.api_key = os.environ['Key_OpenAI']
 
-def is_english(text):
+async def is_english(text):
     lang, _ = langid.classify(text)
     return lang == 'en'
 
-def preprocess_message(text):
+async def preprocess_message(text):
     # Remove mentions
     cleaned_text = re.sub(r'@\\w+', '', text)
     return cleaned_text.strip()
 
-def should_translate(text):
+async def should_translate(text):
     print(f"Debug: Text being passed to should_translate: {text}")
-    cleaned_text = preprocess_message(text)
+    cleaned_text = await preprocess_message(text)
 
     if not cleaned_text:
         print("Debug: Message is empty.")
         return False
 
-    if is_english(cleaned_text):
+    if await is_english(cleaned_text):
         print("Debug: Message is in English.")
         return False
 
@@ -125,21 +125,20 @@ class TranslationCog(commands.Cog):
             
         # Check if the message's guild and channel IDs match the TRANSLATE_CONFIG
         if guild_id in TRANSLATE_CONFIG and channel_id in TRANSLATE_CONFIG[guild_id]['channels'] and not message.author.bot:
-            if should_translate(message.content):
+            if await should_translate(message.content):  # Added await here
                 # Display a non-functional button with label "Translating..."
                 dummy_view = TranslationView(self, message_id=message.id, timeout=None)
                 dummy_message = await message.channel.send("", view=dummy_view)
-
+    
                 system_prompt = (
-                    "Your singular purpose is to translate any non-English language you receive into perfect English, "
-                    "while ensuring you maintain and accurately represent any cultural nuances and slang expressed in the original text."
+                    "Your singular purpose is to translate any non-English language you receive into perfect English, while ensuring you maintain and accurately represent any cultural nuances and slang expressed in the original text."
                 )
-
+    
                 chat_message = [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": f"Translate the following to English: '{message.content}'"}
                 ]
-
+    
                 response = openai.ChatCompletion.create(
                     model="gpt-3.5-turbo",
                     messages=chat_message,
@@ -154,7 +153,7 @@ class TranslationCog(commands.Cog):
                 dummy_view.clear_items()
                 dummy_view.add_item(TranslationButton(message_id=message.id, label="View Translation", style=nextcord.ButtonStyle.grey))
                 await dummy_message.edit(view=dummy_view)
-
+    
                 # This line is where you create the task to disable the button after 1 minute
                 self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
 
