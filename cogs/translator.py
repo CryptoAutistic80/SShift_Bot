@@ -29,6 +29,10 @@ async def should_translate(text):
         print("Debug: Message is empty.")
         return False
 
+    if cleaned_text.strip() == '!fetch':
+        print("Debug: Message is only the !fetch command.")
+        return False
+
     if await is_english(cleaned_text):
         print("Debug: Message is in English.")
         return False
