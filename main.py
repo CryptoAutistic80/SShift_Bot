@@ -1,12 +1,9 @@
-import os
 import nextcord
 import logging
 import logging.handlers
+import os
 from nextcord.ext import commands
-
-# Import the start_server function from your FastAPI file and the TRANSLATE_CONFIG from config.py
 from server import start_server
-from config import TRANSLATE_CONFIG
 from database.database_manager import initialize_db
 
 # Logging setup
@@ -32,27 +29,27 @@ async def on_ready():
     await initialize_db()
     
     logger.info("About to load extensions.")
-    
-    loaded_cogs = set()  # To keep track of which cogs are already loaded
+    load_cogs()
 
-    for guild in bot.guilds:
-        logger.info(f"Bot is in guild: {guild.name} ({guild.id})")
-        if guild.id in TRANSLATE_CONFIG and 'cogs.translator' not in loaded_cogs:
-            logger.info(f"Loading extensions for guild: {guild.name} ({guild.id})")
-            bot.load_extension('cogs.translator')
-            loaded_cogs.add('cogs.translator')
+def load_cogs():
+    """Function to load all cogs from the cogs directory."""
+    # Import necessary libraries for directory navigation
+    import os
+    
+    cogs_directory = "cogs"
+    
+    # Iterate through each file in the cogs directory
+    for filename in os.listdir(cogs_directory):
+        # If the file ends with .py, it's potentially a cog
+        if filename.endswith(".py"):
+            cog_path = f"{cogs_directory}.{filename[:-3]}"  # Removes the .py extension
+            try:
+                bot.load_extension(cog_path)
+                logger.info(f"Loaded cog: {cog_path}")
+            except Exception as e:
+                logger.error(f"Failed to load cog: {cog_path}. Error: {e}")
 
 # Start the FastAPI server to keep the Replit project awake
 start_server()
 
-# Load the cogs.commands extension before the bot runs
-bot.load_extension('cogs.commands')
 bot.run(os.getenv('DISCORD_TOKEN'))
-
-
-
-
-
-
-
-

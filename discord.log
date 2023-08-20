@@ -117,3 +117,7 @@
 [2023-08-20 01:21:16,042] INFO: Loading extensions for guild: SShift Development Lab (1081674998256775239)
 [2023-08-20 01:21:16,236] INFO: Bot is in guild: SShift DAO (1098355558022656091)
 [2023-08-20 01:21:16,236] INFO: Bot is in guild: Morgans Server (1124052286155534437)
+[2023-08-20 13:32:19,345] INFO: Logged in as SShift Bot!
+[2023-08-20 13:32:19,348] INFO: About to load extensions.
+[2023-08-20 13:32:19,351] INFO: Loaded cog: cogs.commands
+[2023-08-20 13:32:19,566] INFO: Loaded cog: cogs.translator

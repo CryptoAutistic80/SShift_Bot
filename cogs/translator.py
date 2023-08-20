@@ -5,7 +5,6 @@ import openai
 import os
 import re
 import langid
-from config import TRANSLATE_CONFIG
 from database.database_manager import insert_translation, retrieve_translation, delete_old_translations
 from datetime import datetime
 
@@ -123,13 +122,10 @@ class TranslationCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
-       ## await self.bot.process_commands(message)
-        guild_id = message.guild.id
-        channel_id = message.channel.id
-            
-        # Check if the message's guild and channel IDs match the TRANSLATE_CONFIG
-        if guild_id in TRANSLATE_CONFIG and channel_id in TRANSLATE_CONFIG[guild_id]['channels'] and not message.author.bot:
-            if await should_translate(message.content):  # Added await here
+        # Make sure the author of the message is not a bot
+        if not message.author.bot:
+            # Check if the message should be translated
+            if await should_translate(message.content):
                 # Display a non-functional button with label "Translating..."
                 dummy_view = TranslationView(self, message_id=message.id, timeout=None)
                 dummy_message = await message.channel.send("", view=dummy_view)
