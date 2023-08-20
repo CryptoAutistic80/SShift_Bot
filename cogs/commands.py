@@ -34,8 +34,7 @@ class CommandsCog(commands.Cog):
     
         else:
             await ctx.send("Please reply to a message to fetch its translation.")
-          
-
+    
   
     @nextcord.slash_command(name="get", description="Fetch the translation for a replied message")
     async def get(self, interaction: nextcord.Interaction, 
