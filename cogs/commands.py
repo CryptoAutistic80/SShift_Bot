@@ -37,14 +37,14 @@ class CommandsCog(commands.Cog):
           
 
   
-    @nextcord.slash_command(name="gettrans", description="Fetch the translation for a replied message")
-    async def gettrans(self, interaction: nextcord.Interaction, 
+    @nextcord.slash_command(name="get", description="Fetch the translation for a replied message")
+    async def get(self, interaction: nextcord.Interaction, 
                   option: str = nextcord.SlashOption(
                       choices={"Translation": "translation"},
                       description="Select an option to fetch"),
                   ):
         """Fetch the translation for a replied message using slash command"""
-        logging.info(f"/gettrans command invoked by {interaction.user.name} ({interaction.user.id})")
+        logging.info(f"/get command invoked by {interaction.user.name} ({interaction.user.id})")
         # Check if the interaction is in reply to an existing message
         if interaction.message.reference:
             original_message_id = interaction.message.reference.message_id
