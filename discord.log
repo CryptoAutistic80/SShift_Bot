@@ -161,3 +161,134 @@
 [2023-08-20 17:58:23,452] INFO: About to load extensions.
 [2023-08-20 17:58:23,629] INFO: Loaded cog: cogs.translator
 [2023-08-20 17:58:23,632] INFO: Loaded cog: cogs.commands
+[2023-08-20 18:40:36,745] INFO: Logged in as SShift Bot!
+[2023-08-20 18:40:36,748] INFO: About to load extensions.
+[2023-08-20 18:40:36,931] INFO: Loaded cog: cogs.translator
+[2023-08-20 18:40:36,933] INFO: Loaded cog: cogs.commands
+[2023-08-20 18:40:50,594] INFO: Logged in as SShift Bot!
+[2023-08-20 18:40:50,597] INFO: About to load extensions.
+[2023-08-20 18:40:50,808] INFO: Loaded cog: cogs.translator
+[2023-08-20 18:40:50,811] INFO: Loaded cog: cogs.commands
+[2023-08-20 18:43:54,962] INFO: Logged in as SShift Bot!
+[2023-08-20 18:43:54,965] INFO: About to load extensions.
+[2023-08-20 18:43:55,162] INFO: Loaded cog: cogs.translator
+[2023-08-20 18:43:55,163] INFO: Loaded cog: cogs.commands
+[2023-08-20 18:54:06,784] INFO: Logged in as SShift Bot!
+[2023-08-20 18:54:06,786] INFO: About to load extensions.
+[2023-08-20 18:54:06,789] INFO: Loaded cog: cogs.commands
+[2023-08-20 18:54:06,955] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: TypeError: slash_command() got an unexpected keyword argument 'guil_id'
+[2023-08-20 18:54:30,557] INFO: Logged in as SShift Bot!
+[2023-08-20 18:54:30,560] INFO: About to load extensions.
+[2023-08-20 18:54:30,561] INFO: Loaded cog: cogs.commands
+[2023-08-20 18:54:30,698] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: TypeError: 'int' object is not iterable
+[2023-08-20 19:01:34,592] INFO: Logged in as SShift Bot!
+[2023-08-20 19:01:34,594] INFO: About to load extensions.
+[2023-08-20 19:01:34,596] INFO: Loaded cog: cogs.commands
+[2023-08-20 19:01:34,807] INFO: Loaded cog: cogs.translator
+[2023-08-20 19:01:57,608] INFO: Logged in as SShift Bot!
+[2023-08-20 19:01:57,611] INFO: About to load extensions.
+[2023-08-20 19:01:57,613] INFO: Loaded cog: cogs.commands
+[2023-08-20 19:01:57,757] INFO: Loaded cog: cogs.translator
+[2023-08-20 19:35:00,358] INFO: Logged in as SShift Bot!
+[2023-08-20 19:35:00,361] INFO: About to load extensions.
+[2023-08-20 19:35:00,363] INFO: Loaded cog: cogs.commands
+[2023-08-20 19:35:00,583] INFO: Loaded cog: cogs.translator
+[2023-08-20 19:47:01,671] INFO: Logged in as SShift Bot!
+[2023-08-20 19:47:01,673] INFO: About to load extensions.
+[2023-08-20 19:47:01,675] INFO: Loaded cog: cogs.commands
+[2023-08-20 19:47:01,902] INFO: Loaded cog: cogs.translator
+[2023-08-20 19:57:48,710] INFO: Logged in as SShift Bot!
+[2023-08-20 19:57:48,712] INFO: About to load extensions.
+[2023-08-20 19:57:48,714] INFO: Loaded cog: cogs.commands
+[2023-08-20 19:57:48,887] INFO: Loaded cog: cogs.translator
+[2023-08-20 20:21:24,524] INFO: Logged in as SShift Bot!
+[2023-08-20 20:21:24,527] INFO: About to load extensions.
+[2023-08-20 20:21:24,530] INFO: Loaded cog: cogs.commands
+[2023-08-20 20:21:24,717] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: ImportError: cannot import name 'TRANSLATE_CONFIG' from 'config' (/home/runner/SShift-Bot/venv/lib/python3.10/site-packages/config/__init__.py)
+[2023-08-20 20:22:33,459] INFO: Logged in as SShift Bot!
+[2023-08-20 20:22:33,462] INFO: About to load extensions.
+[2023-08-20 20:22:33,464] INFO: Loaded cog: cogs.commands
+[2023-08-20 20:22:33,652] INFO: Loaded cog: cogs.translator
+[2023-08-20 20:25:57,184] INFO: Logged in as SShift Bot!
+[2023-08-20 20:25:57,186] INFO: About to load extensions.
+[2023-08-20 20:25:57,342] INFO: Loaded cog: cogs.translator
+[2023-08-20 20:25:57,356] INFO: Loaded cog: cogs.commands
+[2023-08-20 20:25:57,358] INFO: Loaded cog: cogs.app_commands
+[2023-08-20 20:26:10,100] INFO: Logged in as SShift Bot!
+[2023-08-20 20:26:10,103] INFO: About to load extensions.
+[2023-08-20 20:26:10,296] INFO: Loaded cog: cogs.translator
+[2023-08-20 20:26:10,297] INFO: Loaded cog: cogs.commands
+[2023-08-20 20:26:10,298] INFO: Loaded cog: cogs.app_commands
+[2023-08-20 23:50:44,249] INFO: Logged in as SShift Bot!
+[2023-08-20 23:50:44,539] INFO: About to load extensions.
+[2023-08-20 23:50:46,755] INFO: Loaded cog: cogs.translator
+[2023-08-20 23:50:46,756] INFO: Loaded cog: cogs.commands
+[2023-08-20 23:50:46,758] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 00:01:34,276] INFO: Logged in as SShift Bot!
+[2023-08-21 00:01:34,524] INFO: About to load extensions.
+[2023-08-21 00:01:36,387] INFO: Loaded cog: cogs.translator
+[2023-08-21 00:01:36,388] INFO: Loaded cog: cogs.commands
+[2023-08-21 00:01:36,390] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:14:06,402] INFO: Logged in as SShift Bot!
+[2023-08-21 09:14:06,404] INFO: About to load extensions.
+[2023-08-21 09:14:06,651] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:14:06,652] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:14:06,654] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:21:34,490] INFO: Logged in as SShift Bot!
+[2023-08-21 09:21:34,492] INFO: About to load extensions.
+[2023-08-21 09:21:34,751] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:21:34,753] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:21:34,755] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:26:25,564] INFO: Logged in as SShift Bot!
+[2023-08-21 09:26:25,566] INFO: About to load extensions.
+[2023-08-21 09:26:25,774] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:26:25,775] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:26:25,777] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:29:04,259] INFO: Logged in as SShift Bot!
+[2023-08-21 09:29:04,262] INFO: About to load extensions.
+[2023-08-21 09:29:04,427] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:29:04,428] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:29:04,431] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:30:29,617] INFO: Logged in as SShift Bot!
+[2023-08-21 09:30:29,621] INFO: About to load extensions.
+[2023-08-21 09:30:29,800] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:30:29,801] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:30:29,811] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:31:41,953] INFO: Logged in as SShift Bot!
+[2023-08-21 09:31:41,956] INFO: About to load extensions.
+[2023-08-21 09:31:42,176] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:31:42,178] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:31:42,181] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:41:27,192] INFO: Logged in as SShift Bot!
+[2023-08-21 09:41:27,194] INFO: About to load extensions.
+[2023-08-21 09:41:27,366] INFO: Loaded cog: cogs.translator
+[2023-08-21 09:41:27,367] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:41:27,369] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:59:31,847] INFO: Logged in as SShift Bot!
+[2023-08-21 09:59:31,851] INFO: About to load extensions.
+[2023-08-21 09:59:31,853] INFO: Loaded cog: cogs.commands
+[2023-08-21 09:59:31,856] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 09:59:32,101] INFO: Loaded cog: cogs.translator
+[2023-08-21 10:03:30,963] INFO: Logged in as SShift Bot!
+[2023-08-21 10:03:30,966] INFO: About to load extensions.
+[2023-08-21 10:03:30,969] INFO: Loaded cog: cogs.commands
+[2023-08-21 10:03:31,139] INFO: Loaded cog: cogs.translator
+[2023-08-21 10:03:31,141] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 10:06:13,792] INFO: Logged in as SShift Bot!
+[2023-08-21 10:06:13,794] INFO: About to load extensions.
+[2023-08-21 10:06:13,796] INFO: Loaded cog: cogs.commands
+[2023-08-21 10:06:13,966] INFO: Loaded cog: cogs.translator
+[2023-08-21 10:06:13,968] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 10:11:25,540] INFO: Logged in as SShift Bot!
+[2023-08-21 10:11:25,543] INFO: About to load extensions.
+[2023-08-21 10:11:25,546] INFO: Loaded cog: cogs.commands
+[2023-08-21 10:11:25,773] INFO: Loaded cog: cogs.translator
+[2023-08-21 10:11:25,776] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 10:15:23,584] INFO: Loaded cog: cogs.commands
+[2023-08-21 10:15:23,761] INFO: Loaded cog: cogs.translator
+[2023-08-21 10:15:23,763] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 10:15:26,325] INFO: Logged in as SShift Bot!
+[2023-08-21 10:44:58,017] INFO: Loaded cog: cogs.commands
+[2023-08-21 10:44:58,223] INFO: Loaded cog: cogs.translator
+[2023-08-21 10:44:58,225] INFO: Loaded cog: cogs.app_commands
+[2023-08-21 10:45:00,873] INFO: Logged in as SShift Bot!

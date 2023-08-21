@@ -98,7 +98,11 @@ class TranslationCog(commands.Cog):
         self.bot = bot
         self.translations = {}  # Dictionary to store translations (no longer needed but kept for reference)
         self.cleanup_task = self.clean_translations.start()
-
+      
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print("Translator ready")
+  
     @tasks.loop(hours=12)
     async def clean_translations(self):
         await delete_old_translations()
@@ -157,7 +161,8 @@ class TranslationCog(commands.Cog):
                 # This line is where you create the task to disable the button after 1 minute
                 self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
 
-    def cog_unload(self):
+
+def cog_unload(self):
         self.cleanup_task.cancel()
 
 def setup(bot):

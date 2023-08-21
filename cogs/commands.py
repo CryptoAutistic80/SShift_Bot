@@ -10,7 +10,9 @@ class CommandsCog(commands.Cog):
         self.bot = bot
         logging.info("CommandsCog initialized")
 
-  
+    @commands.Cog.listener()
+    async def on_ready(self):
+      print("Commands Loaded")
 
     @commands.command(name="fetch", help="Fetch the translation for a replied message")
     async def fetch_command(self, ctx):
@@ -34,31 +36,8 @@ class CommandsCog(commands.Cog):
     
         else:
             await ctx.send("Please reply to a message to fetch its translation.")
+        
     
-  
-    @nextcord.slash_command(name="get", description="Fetch the translation for a replied message")
-    async def get(self, interaction: nextcord.Interaction, 
-                  option: str = nextcord.SlashOption(
-                      choices={"Translation": "translation"},
-                      description="Select an option to fetch"),
-                  ):
-        """Fetch the translation for a replied message using slash command"""
-        logging.info(f"/get command invoked by {interaction.user.name} ({interaction.user.id})")
-        # Check if the interaction is in reply to an existing message
-        if interaction.message.reference:
-            original_message_id = interaction.message.reference.message_id
-            # Fetch the translation from the database
-            retrieved_translation = await retrieve_translation_by_original_message_id(original_message_id)
-            # If a translation exists, send it
-            if retrieved_translation:
-                await interaction.response.send_message(retrieved_translation, ephemeral=True)
-            else:
-                await interaction.response.send_message(f"No translation found for message ID {original_message_id}", ephemeral=True)
-        else:
-            await interaction.response.send_message("Please reply to a message to fetch its translation.", ephemeral=True)
-
-
-
 def setup(bot):
     bot.add_cog(CommandsCog(bot))
     print("Command Cog loaded")
