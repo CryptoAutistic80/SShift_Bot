@@ -1,6 +1,5 @@
 import nextcord
 from nextcord.ext import commands
-from database.database_manager import retrieve_translation_by_original_message_id
 import logging
 
 class AppCommands(commands.Cog):
@@ -10,31 +9,16 @@ class AppCommands(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        print("/get command live")
+        print("/admin command live")
 
-    @nextcord.slash_command(name="get", description="Translate a message to English.", guild_ids=[1098355558022656091])
-    async def get(self, interaction: nextcord.Interaction, 
-                  option: str = nextcord.SlashOption(
-                      choices={"Translation": "translation"},
-                      description="Select an option to fetch"),
-                  ):
-        """Fetch the translation for a replied message using slash command"""
-        logging.info(f"/get command invoked by {interaction.user.name} ({interaction.user.id})")
-
-        # Check if the interaction is in reply to an existing message
-        if interaction.message.reference:
-            original_message_id = interaction.message.reference.message_id
-            # Fetch the translation from the database
-            retrieved_translation = await retrieve_translation_by_original_message_id(original_message_id)
-            # If a translation exists, send it
-            if retrieved_translation:
-                await interaction.response.send_message(retrieved_translation, ephemeral=True)
-            else:
-                await interaction.response.send_message(f"No translation found for message ID {original_message_id}", ephemeral=True)
-        else:
-            await interaction.response.send_message("Please reply to a message to fetch its translation.", ephemeral=True)
-
+    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=[1098355558022656091])
+    async def admin(self, interaction: nextcord.Interaction):
+        """Admin functions coming soon."""
+        logging.info(f"/admin command invoked by {interaction.user.name} ({interaction.user.id})")
+        await interaction.response.send_message("Coming Soon", ephemeral=True)
+    
 def setup(bot):
     bot.add_cog(AppCommands(bot))
     print("AppCommands cog loaded")
+
 

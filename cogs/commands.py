@@ -9,6 +9,7 @@ class CommandsCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         logging.info("CommandsCog initialized")
+        print("CommandsCog cog initialized")
 
     @commands.Cog.listener()
     async def on_ready(self):
@@ -30,7 +31,7 @@ class CommandsCog(commands.Cog):
                 msg = await ctx.send(f"No translation found for message ID {original_message_id}")
             
             # Set a timer to delete the response and the !fetch command message after 1 minute
-            await asyncio.sleep(30)  # Wait for 30 seconds
+            await asyncio.sleep(120)  # Wait for 120 seconds
             await msg.delete()
             await ctx.message.delete()
     
