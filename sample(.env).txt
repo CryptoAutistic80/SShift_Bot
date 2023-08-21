@@ -1,0 +1,2 @@
+Key_OpenAI=your_openai_api_key_here
+DISCORD_TOKEN=your_discord_bot_token_here
