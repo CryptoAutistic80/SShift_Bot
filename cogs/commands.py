@@ -30,8 +30,8 @@ class CommandsCog(commands.Cog):
             else:
                 msg = await ctx.send(f"No translation found for message ID {original_message_id}")
             
-            # Set a timer to delete the response and the !fetch command message after 2 minute
-            await asyncio.sleep(120)  # Wait for 120 seconds
+            # Set a timer to delete the response and the !fetch command message after 5 minute
+            await asyncio.sleep(300)  # Wait for 5 minutes
             await msg.delete()
             await ctx.message.delete()
     

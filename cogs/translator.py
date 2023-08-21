@@ -37,8 +37,8 @@ class TranslationCog(commands.Cog):
         await delete_old_translations()
 
     async def disable_button(self, message_id: int, channel_id: int):
-        print(f"[{datetime.now()}] Started 3 minute wait for message ID: {message_id}")  # Debug with timestamp
-        await asyncio.sleep(60)  # 1 minute button lifespan
+        print(f"[{datetime.now()}] Started 30 sec wait for message ID: {message_id}")  # Debug with timestamp
+        await asyncio.sleep(30)  # 30 sec button lifespan
     
         channel = self.bot.get_channel(channel_id)
         if not channel:
