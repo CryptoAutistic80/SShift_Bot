@@ -3,11 +3,7 @@ from nextcord.ext import commands, tasks
 import asyncio
 import openai
 import os
-from src.lang_processing import (
-    is_english,
-    preprocess_message,
-    should_translate
-)
+from src.lang_processing import should_translate
 from database.database_manager import (
     insert_translation,
     delete_old_translations
