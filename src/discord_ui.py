@@ -17,4 +17,4 @@ class TranslationView(nextcord.ui.View):
     def __init__(self, cog, message_id, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.cog = cog
-        self.add_item(TranslationButton(message_id, label="Translating...", style=nextcord.ButtonStyle.grey, disabled=True))
+        self.add_item(TranslationButton(message_id, label="Analysing...", style=nextcord.ButtonStyle.grey, disabled=True))

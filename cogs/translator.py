@@ -53,38 +53,42 @@ class TranslationCog(commands.Cog):
     async def on_message(self, message):
         # Make sure the author of the message is not a bot
         if not message.author.bot:
+            # Display a non-functional button without the label argument
+            dummy_view = TranslationView(self, message_id=message.id)
+            dummy_message = await message.channel.send("", view=dummy_view)
+        
             # Check if the message should be translated
-            if await should_translate(message.content):
-                # Display a non-functional button with label "Translating..."
-                dummy_view = TranslationView(self, message_id=message.id, timeout=None)
-                dummy_message = await message.channel.send("", view=dummy_view)
+            if not await should_translate(message.content):
+                await dummy_message.delete()  # delete the dummy button/message if not translating
+                return
     
-                system_prompt = (
-                    "Your singular purpose is to translate any non-English language you receive into perfect English, while ensuring you maintain and accurately represent any cultural nuances and slang expressed in the original text."
-                )
+            system_prompt = (
+                "Your singular purpose is to translate any non-English language you receive into perfect English, while ensuring you maintain and accurately represent any cultural nuances and slang expressed in the original text."
+            )
     
-                chat_message = [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": f"Translate the following to English: '{message.content}'"}
-                ]
+            chat_message = [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": f"Translate the following to English: '{message.content}'"}
+            ]
     
-                response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
-                    messages=chat_message,
-                    temperature=0.2,
-                    max_tokens=500,
-                    frequency_penalty=0.0
-                )
-                translation = response['choices'][0]['message']['content'].strip()
-                await insert_translation(str(message.id), translation, str(message.id))
-                
-                # Edit the dummy button's label to "View Translation" and activate its functionality
-                dummy_view.clear_items()
-                dummy_view.add_item(TranslationButton(message_id=message.id, label="View Translation", style=nextcord.ButtonStyle.grey))
-                await dummy_message.edit(view=dummy_view)
+            response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=chat_message,
+                temperature=0.2,
+                max_tokens=500,
+                frequency_penalty=0.0
+            )
+            translation = response['choices'][0]['message']['content'].strip()
+            await insert_translation(str(message.id), translation, str(message.id))
+            
+            # Replace the dummy button with a functional TranslationButton
+            dummy_view.clear_items()
+            translation_button = TranslationButton(message_id=message.id, label="View Translation", style=nextcord.ButtonStyle.grey)
+            dummy_view.add_item(translation_button)
+            await dummy_message.edit(view=dummy_view)
     
-                # This line is where you create the task to disable the button after 1 minute
-                self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
+            # This line is where you create the task to disable the button after 30 seconds
+            self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
 
 
 def cog_unload(self):
