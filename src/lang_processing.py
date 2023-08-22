@@ -47,14 +47,15 @@ async def should_translate(text):
         r'[ఀ-౿]',  # Telugu
         r'[\u0e00-\u0e7f]',  # Thai
         r'[ༀ-\u0fff]'   # Tibetan
+        r'[\u1400-\u167F]',  # Inuktitut
     ]
     for pattern in non_latin_patterns:
         if re.search(pattern, cleaned_text):
             print("Debug: Message contains non-Latin scripts.")
             return True
 
-    if len(cleaned_text.split()) < 5:
-        print("Debug: Message has less than 5 words.")
+    if len(cleaned_text.split()) < 4:
+        print("Debug: Message has less than 4 words.")
         return False
     
     url_regex = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\\\(\\\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
