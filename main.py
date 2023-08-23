@@ -23,9 +23,13 @@ import nextcord
 import logging
 import logging.handlers
 import os
+import openai
 from nextcord.ext import commands
 from server import start_server
 from database.database_manager import initialize_db
+
+# Initialize the OpenAI API
+openai.api_key = os.environ['Key_OpenAI']
 
 def setup_logging():
     """Configure logging for the bot."""

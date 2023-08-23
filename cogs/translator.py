@@ -2,7 +2,6 @@ import nextcord
 from nextcord.ext import commands, tasks
 import asyncio
 import openai
-import os
 from src.lang_processing import should_translate
 from database.database_manager import (
     insert_translation,
@@ -13,9 +12,6 @@ from src.discord_ui import (
     TranslationView
 )
 from datetime import datetime
-
-# Initialize the OpenAI API
-openai.api_key = os.environ['Key_OpenAI']
 
 class TranslationCog(commands.Cog):
     def __init__(self, bot):
@@ -72,7 +68,7 @@ class TranslationCog(commands.Cog):
             ]
     
             response = openai.ChatCompletion.create(
-                model="gpt-4",
+                model="gpt-3.5-turbo",
                 messages=chat_message,
                 temperature=0.2,
                 max_tokens=500,
