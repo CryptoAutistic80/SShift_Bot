@@ -14,6 +14,7 @@ class CommandsCog(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
       print("Commands Loaded")
+    
 
     @commands.command(name="fetch", help="Fetch the translation for a replied message")
     async def fetch_command(self, ctx):
@@ -37,8 +38,26 @@ class CommandsCog(commands.Cog):
     
         else:
             await ctx.send("Please reply to a message to fetch its translation.")
+
+
+  
+    @commands.command(name="reply", help="Reply to a given input (coming soon)")
+    async def reply_command(self, ctx):
+        """Reply to a given input using traditional command"""
+        logging.info(f"!reply command invoked by {ctx.author.name} ({ctx.author.id})")
         
-    
+        # Check if the context is in reply to an existing message
+        if ctx.message.reference:
+            original_message_id = ctx.message.reference.message_id
+            logging.info(f"!reply command used in reply to message ID: {original_message_id}")
+            await ctx.send("Coming soon")
+        
+        else:
+            logging.info("The !reply command was not used in reply to a message.")
+            await ctx.send("Please use the !reply command in response to an existing message.")
+
+          
+
 def setup(bot):
     bot.add_cog(CommandsCog(bot))
     print("Command Cog loaded")
