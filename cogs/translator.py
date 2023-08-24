@@ -75,7 +75,7 @@ class TranslationCog(commands.Cog):
                 frequency_penalty=0.0
             )
             translation = response['choices'][0]['message']['content'].strip()
-            await insert_translation(str(message.id), translation, str(message.id))
+            await insert_translation(message.guild.id, str(message.id), translation, str(message.id))
             
             # Replace the dummy button with a functional TranslationButton
             dummy_view.clear_items()

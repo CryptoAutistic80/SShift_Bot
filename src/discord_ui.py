@@ -8,7 +8,7 @@ class TranslationButton(nextcord.ui.Button):
 
     async def callback(self, interaction: nextcord.Interaction):
         await interaction.response.defer()
-        translation = await retrieve_translation(str(self.message_id))
+        translation = await retrieve_translation(interaction.guild.id, str(self.message_id))
         if not translation:
             translation = "Translation not found."
         await interaction.followup.send(translation, ephemeral=True)

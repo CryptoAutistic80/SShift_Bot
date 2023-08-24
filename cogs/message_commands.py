@@ -20,7 +20,7 @@ class MessageCommands(commands.Cog):
         
         original_message_id = target_message.id
         # Fetch the translation from the database
-        retrieved_translation = await retrieve_translation_by_original_message_id(original_message_id)
+        retrieved_translation = await retrieve_translation_by_original_message_id(interaction.guild.id, original_message_id)
         # If a translation exists, send it
         if retrieved_translation:
             await interaction.response.send_message(retrieved_translation, ephemeral=True)

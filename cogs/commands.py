@@ -23,7 +23,7 @@ class CommandsCog(commands.Cog):
         if ctx.message.reference:
             original_message_id = ctx.message.reference.message_id
             # Fetch the translation from the database
-            translation = await retrieve_translation_by_original_message_id(original_message_id)
+            translation = await retrieve_translation_by_original_message_id(ctx.guild.id, original_message_id)
             # If a translation exists, send it
             if translation:
                 msg = await ctx.send(translation)
