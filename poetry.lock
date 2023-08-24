@@ -91,6 +91,32 @@ tests = ["attrs", "zope-interface"]
 tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pytest-mypy-plugins", "pytest-xdist", "pytest (>=4.3.0)"]
 
 [[package]]
+name = "auto-mix-prep"
+version = "0.2.0"
+description = "Application for automatically preparing stems for mixing."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pydub = "*"
+
+[[package]]
+name = "beautifultable"
+version = "1.1.0"
+description = "Print text tables for terminals"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+wcwidth = "*"
+
+[package.extras]
+all = ["pandas"]
+dev = ["pandas"]
+
+[[package]]
 name = "blinker"
 version = "1.6.2"
 description = "Fast, simple object-to-object and broadcast signaling"
@@ -207,6 +233,18 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "consultor"
+version = "0.2.0"
+description = "Consultor te ayuda a explorar las diferentes carreras y cursos que las universidades ofrecen"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+beautifultable = "*"
+pymongo = "*"
+
+[[package]]
 name = "crashtest"
 version = "0.3.1"
 description = "Manage Python errors with ease"
@@ -250,6 +288,22 @@ description = "Distribution utilities"
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "dnspython"
+version = "2.4.2"
+description = "DNS toolkit"
+category = "main"
+optional = false
+python-versions = ">=3.8,<4.0"
+
+[package.extras]
+doq = ["aioquic (>=0.9.20)"]
+dnssec = ["cryptography (>=2.6,<42.0)"]
+doh = ["h2 (>=4.1.0)", "httpcore (>=0.17.3)", "httpx (>=0.24.1)"]
+idna = ["idna (>=2.1,<4.0)"]
+trio = ["trio (>=0.14,<0.23)"]
+wmi = ["wmi (>=1.5.1,<2.0.0)"]
 
 [[package]]
 name = "exceptiongroup"
@@ -738,6 +792,14 @@ python-versions = ">=3.7"
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "pydub"
+version = "0.25.1"
+description = "Manipulate audio with an simple and easy high level interface"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pyflakes"
 version = "2.5.0"
 description = "passive checker of Python programs"
@@ -752,6 +814,25 @@ description = "A pure Python Levenshtein implementation that's not freaking GPL'
 category = "dev"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "pymongo"
+version = "4.5.0"
+description = "Python driver for MongoDB <http://www.mongodb.org>"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+dnspython = ">=1.16.0,<3.0.0"
+
+[package.extras]
+aws = ["pymongo-auth-aws (<2.0.0)"]
+encryption = ["pymongo", "pymongocrypt (>=1.6.0,<2.0.0)", "certifi"]
+gssapi = ["pykerberos", "winkerberos (>=0.5.0)"]
+ocsp = ["pyopenssl (>=17.2.0)", "requests (<3.0.0)", "cryptography (>=2.5)", "service-identity (>=18.1.0)", "certifi"]
+snappy = ["python-snappy"]
+zstd = ["zstandard"]
 
 [[package]]
 name = "python-lsp-jsonrpc"
@@ -1026,6 +1107,14 @@ docs = ["furo (>=2023.5.20)", "proselint (>=0.13)", "sphinx-argparse (>=0.4)", "
 test = ["covdefaults (>=2.3)", "coverage-enable-subprocess (>=1)", "coverage (>=7.2.7)", "flaky (>=3.7)", "packaging (>=23.1)", "pytest-env (>=0.8.2)", "pytest-freezer (>=0.4.8)", "pytest-mock (>=3.11.1)", "pytest-randomly (>=3.12)", "pytest-timeout (>=2.1)", "pytest (>=7.4)", "setuptools (>=68)", "time-machine (>=2.10)"]
 
 [[package]]
+name = "wcwidth"
+version = "0.2.6"
+description = "Measures the displayed width of unicode strings in a terminal"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "webencodings"
 version = "0.5.1"
 description = "Character encoding aliases for legacy web content"
@@ -1095,7 +1184,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-ena
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "5331a693ee7f9fdbb4aaa6562c4bdfce20777b6fb164276fd099dd26fb5887fc"
+content-hash = "a1dee301408b458a8633e97cdac35a4b1589b785fe9ed27b80b8f90fea7841e4"
 
 [metadata.files]
 aiohttp = []
@@ -1105,6 +1194,8 @@ annotated-types = []
 anyio = []
 async-timeout = []
 attrs = []
+auto-mix-prep = []
+beautifultable = []
 blinker = []
 cachecontrol = []
 cachy = []
@@ -1116,10 +1207,12 @@ click = []
 clikit = []
 colorama = []
 config = []
+consultor = []
 crashtest = []
 cryptography = []
 debugpy = []
 distlib = []
+dnspython = []
 exceptiongroup = []
 fastapi = []
 filelock = []
@@ -1160,8 +1253,10 @@ ptyprocess = []
 pycparser = []
 pydantic = []
 pydantic-core = []
+pydub = []
 pyflakes = []
 pylev = []
+pymongo = []
 python-lsp-jsonrpc = []
 pytoolconfig = []
 pywin32-ctypes = []
@@ -1183,6 +1278,7 @@ ujson = []
 urllib3 = []
 uvicorn = []
 virtualenv = []
+wcwidth = []
 webencodings = []
 werkzeug = []
 whatthepatch = []

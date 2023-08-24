@@ -562,3 +562,24 @@
 [2023-08-23 09:31:20,242] INFO: Loaded cog: cogs.commands
 [2023-08-23 09:31:20,271] INFO: Loaded cog: cogs.translator
 [2023-08-23 09:31:22,858] INFO: Logged in as SShift Bot!
+[2023-08-23 18:24:52,742] INFO: Loaded cog: cogs.message_commands
+[2023-08-23 18:24:52,744] INFO: Loaded cog: cogs.commands
+[2023-08-23 18:24:52,766] INFO: Loaded cog: cogs.translator
+[2023-08-23 18:24:52,768] INFO: Loaded cog: cogs.app_commands
+[2023-08-23 18:24:55,360] INFO: Logged in as SShift Bot!
+[2023-08-23 18:27:41,087] INFO: Loaded cog: cogs.message_commands
+[2023-08-23 18:27:41,088] INFO: Loaded cog: cogs.commands
+[2023-08-23 18:27:41,103] INFO: Loaded cog: cogs.translator
+[2023-08-23 18:27:41,105] INFO: Loaded cog: cogs.app_commands
+[2023-08-23 18:27:43,712] INFO: Logged in as SShift Bot!
+[2023-08-24 09:31:48,849] INFO: Loaded cog: cogs.message_commands
+[2023-08-24 09:31:48,851] INFO: Loaded cog: cogs.commands
+[2023-08-24 09:31:48,852] INFO: Loaded cog: cogs.app_commands
+[2023-08-24 09:31:48,880] INFO: Loaded cog: cogs.translator
+[2023-08-24 09:31:48,880] ERROR: Failed to load cog: cogs.__init__. Error: Extension 'cogs.__init__' has no 'setup' function.
+[2023-08-24 09:31:51,683] INFO: Logged in as SShift Bot!
+[2023-08-24 09:33:17,510] INFO: Loaded cog: cogs.message_commands
+[2023-08-24 09:33:17,511] INFO: Loaded cog: cogs.commands
+[2023-08-24 09:33:17,513] INFO: Loaded cog: cogs.app_commands
+[2023-08-24 09:33:17,523] INFO: Loaded cog: cogs.translator
+[2023-08-24 09:33:20,163] INFO: Logged in as SShift Bot!

@@ -11,7 +11,7 @@ class AppCommands(commands.Cog):
     async def on_ready(self):
         print("/admin command live")
 
-    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=[1098355558022656091])
+    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=[1098355558022656091, 1099667794016092210])
     async def admin(self, interaction: nextcord.Interaction):
         """Admin functions coming soon."""
         logging.info(f"/admin command invoked by {interaction.user.name} ({interaction.user.id})")
