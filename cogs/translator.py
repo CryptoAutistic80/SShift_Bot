@@ -68,7 +68,7 @@ class TranslationCog(commands.Cog):
             ]
     
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4",
                 messages=chat_message,
                 temperature=0.2,
                 max_tokens=500,

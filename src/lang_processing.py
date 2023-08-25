@@ -18,8 +18,14 @@ async def should_translate(text):
         print("Debug: Message is empty.")
         return False
 
-    if cleaned_text.strip() == '!fetch':
+    if cleaned_text == '!fetch':
         print("Debug: Message is only the !fetch command.")
+        return False
+    elif cleaned_text.startswith('!reply '):
+        print("Debug: Message starts with !reply followed by a space.")
+        return False
+    elif cleaned_text == '!reply':
+        print("Debug: Message is only the !reply command.")
         return False
 
     if await is_english(cleaned_text):
