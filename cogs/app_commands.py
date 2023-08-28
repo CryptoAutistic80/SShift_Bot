@@ -2,6 +2,7 @@ import nextcord
 import openai
 from nextcord.ext import commands
 from src.lang_processing import is_english, preprocess_message, should_translate
+from main import MEMBER_GUILDS, TRANSLATOR_MODEL
 import logging
 
 class AppCommands(commands.Cog):
@@ -19,7 +20,7 @@ class AppCommands(commands.Cog):
     # ADMIN COMMANDS
     #################
 
-    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=[1098355558022656091, 1099667794016092210, 1124052286155534437])
+    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=MEMBER_GUILDS)
     async def admin(self, interaction: nextcord.Interaction):
         try:
             logging.info(f"/admin command invoked by {interaction.user.name} ({interaction.user.id})")
@@ -31,7 +32,7 @@ class AppCommands(commands.Cog):
     # USER COMMANDS
     #################
 
-    @nextcord.slash_command(name="reply", description="Reply to a user's last message.", guild_ids=[1098355558022656091, 1099667794016092210])
+    @nextcord.slash_command(name="reply", description="Reply to a user's last message.", guild_ids=MEMBER_GUILDS)
     async def reply(self, interaction: nextcord.Interaction, user: nextcord.Member, text: str):
         try:
             logging.info("Received /reply command.")
@@ -62,7 +63,7 @@ class AppCommands(commands.Cog):
             ]
 
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model=TRANSLATOR_MODEL,
                 messages=chat_message,
                 temperature=0.2,
                 max_tokens=500,

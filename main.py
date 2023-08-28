@@ -31,6 +31,10 @@ from database.database_manager import initialize_db
 # Initialize the OpenAI API
 openai.api_key = os.environ['Key_OpenAI']
 
+# Set Constants
+TRANSLATOR_MODEL = "gpt-3.5-turbo"
+MEMBER_GUILDS = [1098355558022656091, 1099667794016092210, 1124052286155534437] 
+
 def setup_logging():
     """Configure logging for the bot."""
     logger = logging.getLogger('discord')

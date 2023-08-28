@@ -3,6 +3,7 @@ import openai
 import logging
 from nextcord.ext import commands
 from database.database_manager import retrieve_translation_by_original_message_id
+from main import TRANSLATOR_MODEL
 import asyncio
 
 
@@ -62,7 +63,7 @@ class CommandsCog(commands.Cog):
         
                 # Use OpenAI API to get the translation
                 response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model=TRANSLATOR_MODEL,
                     messages=chat_message,
                     temperature=0.2,
                     max_tokens=500,

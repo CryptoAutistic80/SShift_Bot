@@ -3,6 +3,7 @@ from nextcord.ext import commands, tasks
 import asyncio
 import openai
 from src.lang_processing import should_translate
+from main import TRANSLATOR_MODEL
 from database.database_manager import (
     insert_translation,
     delete_old_translations
@@ -72,7 +73,7 @@ class TranslationCog(commands.Cog):
                 ]
     
                 response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
+                    model=TRANSLATOR_MODEL,
                     messages=chat_message,
                     temperature=0.2,
                     max_tokens=500,
