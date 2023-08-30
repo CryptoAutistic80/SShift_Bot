@@ -24,7 +24,8 @@ import logging
 import logging.handlers
 import os
 import openai
-from nextcord.ext import commands
+import json
+from nextcord.ext import commands, tasks
 from server import start_server
 from database.database_manager import initialize_db
 
@@ -32,8 +33,15 @@ from database.database_manager import initialize_db
 openai.api_key = os.environ['Key_OpenAI']
 
 # Set Constants
-TRANSLATOR_MODEL = "gpt-3.5-turbo"
-MEMBER_GUILDS = [1098355558022656091, 1099667794016092210, 1124052286155534437] 
+TRANSLATOR_MODEL = "gpt-4"
+
+def get_member_guilds():
+    """Load guilds from the member_guilds.json file."""
+    with open('json/member_guilds.json', 'r') as f:
+        guilds_data = json.load(f)
+    return [guild['guild_id'] for guild in guilds_data]
+
+MEMBER_GUILDS = get_member_guilds()
 
 def setup_logging():
     """Configure logging for the bot."""
@@ -83,6 +91,16 @@ load_cogs(bot, logger)
 # Start the FastAPI server to keep the Replit project awake
 start_server()
 
+@tasks.loop(minutes=15)  # This will refresh every 10 minutes. Adjust as needed.
+async def update_guilds():
+    global MEMBER_GUILDS
+    MEMBER_GUILDS = get_member_guilds()
+
+@update_guilds.before_loop
+async def before_update_guilds():
+    await bot.wait_until_ready()
+
+update_guilds.start()
+
 # Start the bot
 bot.run(os.getenv('DISCORD_TOKEN'))
-

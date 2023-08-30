@@ -20,13 +20,34 @@ class AppCommands(commands.Cog):
     # ADMIN COMMANDS
     #################
 
-    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=MEMBER_GUILDS)
+    @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=[1098355558022656091])
     async def admin(self, interaction: nextcord.Interaction):
+        # Check if the user has the 'administrator' permission in the guild
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message("You do not have the required permissions to use this command.", ephemeral=True)
+            return
+    
         try:
             logging.info(f"/admin command invoked by {interaction.user.name} ({interaction.user.id})")
-            await interaction.response.send_message("Coming Soon")
+            pass  # This will never get called since it has subcommands.
         except Exception as e:
             logging.error(f"Error executing /admin command: {e}")
+
+    @admin.subcommand(name="add_guild", description="Add a new guild to the allowed list")
+    async def add_guild(self, interaction: nextcord.Interaction, guild_name: str, guild_id: str):
+        # Convert guild_id to an integer
+        try:
+            guild_id_int = int(guild_id)
+        except ValueError:
+            await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
+            return
+
+        # Add the guild_id to the allowed list
+        # Note: This is a temporary solution. For persistence, you'd store it in a database or file.
+        MEMBER_GUILDS.append(guild_id)
+
+        await interaction.response.send_message(f"Guild {guild_name} with ID {guild_id} has been added!")
+
 
     #################
     # USER COMMANDS
