@@ -13,6 +13,7 @@ from src.discord_ui import (
     TranslationView
 )
 from datetime import datetime
+from main import MEMBER_GUILDS
 
 class TranslationCog(commands.Cog):
     def __init__(self, bot):
@@ -54,6 +55,10 @@ class TranslationCog(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        # Check if the message's guild is in MEMBER_GUILDS
+        if message.guild and message.guild.id not in MEMBER_GUILDS:
+            return  # Do not proceed if it's not in MEMBER_GUILDS
+    
         if not message.author.bot:
             dummy_view = TranslationView(self, message_id=message.id)
             dummy_message = await message.channel.send("", view=dummy_view)
@@ -92,7 +97,6 @@ class TranslationCog(commands.Cog):
                 self.bot.loop.create_task(self.disable_button(dummy_message.id, message.channel.id))
             except Exception as e:
                 print(f"Error in on_message: {e}")
-
 
 def cog_unload(self):
     try:

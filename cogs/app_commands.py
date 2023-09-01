@@ -1,8 +1,9 @@
 import nextcord
 import openai
+import json
 from nextcord.ext import commands
 from src.lang_processing import is_english, preprocess_message, should_translate
-from main import MEMBER_GUILDS, TRANSLATOR_MODEL
+from main import TRANSLATOR_MODEL
 import logging
 
 class AppCommands(commands.Cog):
@@ -16,9 +17,9 @@ class AppCommands(commands.Cog):
         logging.info("app commands live")
         print("app commands live")  # Add this line for consistency
 
-    #################
-    # ADMIN COMMANDS
-    #################
+    ################################
+    # ADMIN COMMANDS SSHIFT DAO ONLY
+    ################################
 
     @nextcord.slash_command(name="admin", description="Admin functions.", guild_ids=[1098355558022656091])
     async def admin(self, interaction: nextcord.Interaction):
@@ -41,19 +42,63 @@ class AppCommands(commands.Cog):
         except ValueError:
             await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
             return
-
-        # Add the guild_id to the allowed list
-        # Note: This is a temporary solution. For persistence, you'd store it in a database or file.
-        MEMBER_GUILDS.append(guild_id)
-
+    
+        # Read the current list of guilds from the JSON file
+        with open("json/member_guilds.json", "r") as file:
+            guilds = json.load(file)
+    
+        # Check if the guild_id already exists
+        if any(guild["guild_id"] == guild_id_int for guild in guilds):
+            await interaction.response.send_message(f"Guild with ID {guild_id} already exists in the list!")
+            return
+    
+        # Append the new guild data
+        guilds.append({
+            "guild_id": guild_id_int,
+            "guild_name": guild_name
+        })
+    
+        # Write the updated list back to the JSON file
+        with open("json/member_guilds.json", "w") as file:
+            json.dump(guilds, file, indent=4)
+    
         await interaction.response.send_message(f"Guild {guild_name} with ID {guild_id} has been added!")
+      
+    @admin.subcommand(name="remove_guild", description="Remove a guild from the allowed list")
+    async def remove_guild(self, interaction: nextcord.Interaction, guild_id: str):
+        # Convert guild_id to an integer
+        try:
+            guild_id_int = int(guild_id)
+        except ValueError:
+            await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
+            return
+    
+        # Read the current list of guilds from the JSON file
+        with open("json/member_guilds.json", "r") as file:
+            guilds = json.load(file)
+    
+        # Check if the guild_id exists
+        guild_to_remove = next((guild for guild in guilds if guild["guild_id"] == guild_id_int), None)
+        
+        if not guild_to_remove:
+            await interaction.response.send_message(f"Guild with ID {guild_id} does not exist in the list!")
+            return
+        
+        # Remove the guild data
+        guilds.remove(guild_to_remove)
+    
+        # Write the updated list back to the JSON file
+        with open("json/member_guilds.json", "w") as file:
+            json.dump(guilds, file, indent=4)
+    
+        await interaction.response.send_message(f"Guild with ID {guild_id} has been removed!")
 
 
     #################
     # USER COMMANDS
     #################
 
-    @nextcord.slash_command(name="reply", description="Reply to a user's last message.", guild_ids=MEMBER_GUILDS)
+    @nextcord.slash_command(name="reply", description="Reply to a user's last message.")
     async def reply(self, interaction: nextcord.Interaction, user: nextcord.Member, text: str):
         try:
             logging.info("Received /reply command.")

@@ -33,7 +33,7 @@ from database.database_manager import initialize_db
 openai.api_key = os.environ['Key_OpenAI']
 
 # Set Constants
-TRANSLATOR_MODEL = "gpt-4"
+TRANSLATOR_MODEL = "gpt-3.5-turbo"
 
 def get_member_guilds():
     """Load guilds from the member_guilds.json file."""
@@ -91,14 +91,18 @@ load_cogs(bot, logger)
 # Start the FastAPI server to keep the Replit project awake
 start_server()
 
-@tasks.loop(minutes=15)  # This will refresh every 10 minutes. Adjust as needed.
+@tasks.loop(minutes=15)  # This will refresh every 15 minutes. Adjust as needed.
 async def update_guilds():
     global MEMBER_GUILDS
+    logging.info("Starting the update_guilds task...")
     MEMBER_GUILDS = get_member_guilds()
+    logging.info("MEMBER_GUILDS has been updated.")
 
 @update_guilds.before_loop
 async def before_update_guilds():
+    logging.info("Waiting for the bot to be ready before starting the update_guilds task...")
     await bot.wait_until_ready()
+    logging.info("Bot is ready. The update_guilds task will now start.")
 
 update_guilds.start()
 

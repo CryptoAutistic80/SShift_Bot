@@ -3,7 +3,7 @@ import openai
 import logging
 from nextcord.ext import commands
 from database.database_manager import retrieve_translation_by_original_message_id
-from main import TRANSLATOR_MODEL
+from main import TRANSLATOR_MODEL, MEMBER_GUILDS
 import asyncio
 
 
@@ -41,7 +41,7 @@ class CommandsCog(commands.Cog):
             logging.error(f"Error executing !fetch command: {e}")
             await ctx.send("An error occurred. Please try again later.")
 
-    @commands.command(name="reply", help="Translate your reply to the language of the original message")
+    @commands.command(name="reply", help="Translate your reply to the language of the original message", guild_ids=MEMBER_GUILDS)
     async def reply_command(self, ctx, *, user_reply: str):
         try:
             logging.info(f"!reply command invoked by {ctx.author.name} ({ctx.author.id})")
