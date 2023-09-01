@@ -4,6 +4,7 @@ import json
 from nextcord.ext import commands
 from src.lang_processing import is_english, preprocess_message, should_translate
 from main import TRANSLATOR_MODEL
+from src.utils import update_guilds
 import logging
 
 class AppCommands(commands.Cog):
@@ -63,7 +64,8 @@ class AppCommands(commands.Cog):
             json.dump(guilds, file, indent=4)
     
         await interaction.response.send_message(f"Guild {guild_name} with ID {guild_id} has been added!")
-      
+        await update_guilds()
+    
     @admin.subcommand(name="remove_guild", description="Remove a guild from the allowed list")
     async def remove_guild(self, interaction: nextcord.Interaction, guild_id: str):
         # Convert guild_id to an integer
@@ -79,11 +81,11 @@ class AppCommands(commands.Cog):
     
         # Check if the guild_id exists
         guild_to_remove = next((guild for guild in guilds if guild["guild_id"] == guild_id_int), None)
-        
+    
         if not guild_to_remove:
             await interaction.response.send_message(f"Guild with ID {guild_id} does not exist in the list!")
             return
-        
+    
         # Remove the guild data
         guilds.remove(guild_to_remove)
     
@@ -92,6 +94,7 @@ class AppCommands(commands.Cog):
             json.dump(guilds, file, indent=4)
     
         await interaction.response.send_message(f"Guild with ID {guild_id} has been removed!")
+        await update_guilds()
 
 
     #################

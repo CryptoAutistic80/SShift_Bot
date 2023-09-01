@@ -2,7 +2,6 @@ import nextcord
 from nextcord.ext import commands
 import logging
 from database.database_manager import retrieve_translation_by_original_message_id
-from main import MEMBER_GUILDS
 
 class MessageCommands(commands.Cog):
     def __init__(self, bot):

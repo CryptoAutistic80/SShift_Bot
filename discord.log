@@ -1306,3 +1306,93 @@
 [2023-09-01 14:22:51,118] INFO: Loaded cog: cogs.commands
 [2023-09-01 14:22:54,282] INFO: Logged in as SShift Bot!
 [2023-09-01 14:22:54,282] INFO: Logged in as SShift Bot!
+[2023-09-01 15:06:24,077] INFO: Loaded cog: cogs.translator
+[2023-09-01 15:06:24,077] INFO: Loaded cog: cogs.translator
+[2023-09-01 15:06:24,079] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 15:06:24,079] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 15:06:24,082] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 15:06:24,082] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 15:06:24,085] INFO: Loaded cog: cogs.commands
+[2023-09-01 15:06:24,085] INFO: Loaded cog: cogs.commands
+[2023-09-01 15:06:27,685] INFO: Logged in as SShift Bot!
+[2023-09-01 15:06:27,685] INFO: Logged in as SShift Bot!
+[2023-09-01 15:24:48,713] INFO: Loaded cog: cogs.translator
+[2023-09-01 15:24:48,713] INFO: Loaded cog: cogs.translator
+[2023-09-01 15:24:48,716] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 15:24:48,716] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 15:24:48,718] INFO: Loaded cog: cogs.commands
+[2023-09-01 15:24:48,718] INFO: Loaded cog: cogs.commands
+[2023-09-01 15:24:48,719] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 15:24:48,719] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 15:24:52,144] INFO: Logged in as SShift Bot!
+[2023-09-01 15:24:52,144] INFO: Logged in as SShift Bot!
+[2023-09-01 15:44:23,450] INFO: Loaded cog: cogs.translator
+[2023-09-01 15:44:23,450] INFO: Loaded cog: cogs.translator
+[2023-09-01 15:44:23,686] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 15:44:23,686] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 15:44:23,689] INFO: Loaded cog: cogs.commands
+[2023-09-01 15:44:23,689] INFO: Loaded cog: cogs.commands
+[2023-09-01 15:44:23,691] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 15:44:23,691] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 15:44:27,538] INFO: Logged in as SShift Bot!
+[2023-09-01 15:44:27,538] INFO: Logged in as SShift Bot!
+[2023-09-01 17:34:53,194] INFO: Loaded cog: cogs.translator
+[2023-09-01 17:34:53,194] INFO: Loaded cog: cogs.translator
+[2023-09-01 17:34:53,196] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 17:34:53,196] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 17:34:53,198] INFO: Loaded cog: cogs.commands
+[2023-09-01 17:34:53,198] INFO: Loaded cog: cogs.commands
+[2023-09-01 17:34:53,199] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 17:34:53,199] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 17:34:56,052] INFO: Logged in as SShift Bot!
+[2023-09-01 17:34:56,052] INFO: Logged in as SShift Bot!
+[2023-09-01 18:20:46,796] INFO: Loaded cog: cogs.translator
+[2023-09-01 18:20:46,796] INFO: Loaded cog: cogs.translator
+[2023-09-01 18:20:46,798] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 18:20:46,798] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 18:20:46,799] INFO: Loaded cog: cogs.commands
+[2023-09-01 18:20:46,799] INFO: Loaded cog: cogs.commands
+[2023-09-01 18:20:46,800] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 18:20:46,800] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 18:20:46,802] INFO: Waiting for the bot to be ready before starting the update_guilds task...
+[2023-09-01 18:20:46,802] INFO: Waiting for the bot to be ready before starting the update_guilds task...
+[2023-09-01 18:20:49,708] INFO: Bot is ready. The update_guilds task will now start.
+[2023-09-01 18:20:49,708] INFO: Bot is ready. The update_guilds task will now start.
+[2023-09-01 18:20:49,708] INFO: Logged in as SShift Bot!
+[2023-09-01 18:20:49,708] INFO: Logged in as SShift Bot!
+[2023-09-01 18:20:49,709] INFO: Starting the update_guilds task...
+[2023-09-01 18:20:49,709] INFO: Starting the update_guilds task...
+[2023-09-01 18:20:49,710] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:20:49,710] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:35:49,715] INFO: Starting the update_guilds task...
+[2023-09-01 18:35:49,715] INFO: Starting the update_guilds task...
+[2023-09-01 18:35:49,716] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:35:49,716] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:36:35,935] INFO: Loaded cog: cogs.translator
+[2023-09-01 18:36:35,935] INFO: Loaded cog: cogs.translator
+[2023-09-01 18:36:35,937] INFO: Loaded cog: cogs.commands
+[2023-09-01 18:36:35,937] INFO: Loaded cog: cogs.commands
+[2023-09-01 18:36:35,938] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 18:36:35,938] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 18:36:35,940] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: ImportError: cannot import name 'update_guilds' from partially initialized module 'main' (most likely due to a circular import) (/home/runner/SShift-Bot/main.py)
+[2023-09-01 18:36:35,940] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: ImportError: cannot import name 'update_guilds' from partially initialized module 'main' (most likely due to a circular import) (/home/runner/SShift-Bot/main.py)
+[2023-09-01 18:36:38,734] INFO: Logged in as SShift Bot!
+[2023-09-01 18:36:38,734] INFO: Logged in as SShift Bot!
+[2023-09-01 18:39:49,727] INFO: Loaded cog: cogs.translator
+[2023-09-01 18:39:49,727] INFO: Loaded cog: cogs.translator
+[2023-09-01 18:39:49,734] INFO: Loaded cog: cogs.commands
+[2023-09-01 18:39:49,734] INFO: Loaded cog: cogs.commands
+[2023-09-01 18:39:49,737] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 18:39:49,737] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 18:39:49,747] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 18:39:49,747] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 18:39:53,034] INFO: Logged in as SShift Bot!
+[2023-09-01 18:39:53,034] INFO: Logged in as SShift Bot!
+[2023-09-01 18:47:48,212] INFO: Updating MEMBER_GUILDS...
+[2023-09-01 18:47:48,212] INFO: Updating MEMBER_GUILDS...
+[2023-09-01 18:47:48,213] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:47:48,213] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:48:36,874] INFO: Updating MEMBER_GUILDS...
+[2023-09-01 18:48:36,874] INFO: Updating MEMBER_GUILDS...
+[2023-09-01 18:48:36,875] INFO: MEMBER_GUILDS has been updated.
+[2023-09-01 18:48:36,875] INFO: MEMBER_GUILDS has been updated.
