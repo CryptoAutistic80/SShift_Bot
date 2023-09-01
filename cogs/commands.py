@@ -16,6 +16,86 @@ class CommandsCog(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("Commands Loaded")
+      
+    ################
+    # ADMIN COMMANDS
+    ################
+          
+    @commands.command(name="setup", help="Set up the bot's permissions for a specific channel")
+    @commands.has_guild_permissions(administrator=True)  # Ensure the user has admin permissions
+    async def setup_command(self, ctx):
+        # Prompt the user for the channel
+        await ctx.send("Please provide the channel ID or mention the channel using #channel-name format.")
+        
+        def check(message):
+            # Ensure the response is from the command invoker and in the same channel
+            return message.author == ctx.author and message.channel == ctx.channel
+    
+        try:
+            # Wait for the user's response
+            response = await self.bot.wait_for('message', check=check, timeout=60)  # Wait for 60 seconds
+            
+            # Extract channel ID from the response
+            if response.content.startswith("<#") and response.content.endswith(">"):
+                channel_id = int(response.content[2:-1])
+            else:
+                channel_id = int(response.content)
+            
+            specified_channel = ctx.guild.get_channel(channel_id)
+            if not specified_channel:
+                await ctx.send("Invalid channel provided. Please ensure you provide a valid channel ID or mention.")
+                return
+            
+            # Create the "Translator" role with the desired permissions
+            permissions = nextcord.Permissions(
+                read_messages=True,
+                read_message_history=True,
+                send_messages=True,
+                manage_messages=True,
+                add_reactions=True,
+                use_slash_commands=True
+            )
+            translator_role = await ctx.guild.create_role(name="Translator", permissions=permissions, color=nextcord.Color.blue())
+            await ctx.send("'Translator' role created.")
+            
+            # Assign the "Translator" role to the bot
+            bot_member = ctx.guild.get_member(self.bot.user.id)
+            await bot_member.add_roles(translator_role)
+            await ctx.send("'Translator' role assigned to the bot.")
+    
+            # Iterate over all channels and set the bot's permissions
+            for channel in ctx.guild.channels:
+                if channel == specified_channel:
+                    continue  # Skip the specified channel
+                overwrites = channel.overwrites_for(ctx.guild.me) or nextcord.PermissionOverwrite()
+                overwrites.read_messages = False
+                await channel.set_permissions(ctx.guild.me, overwrite=overwrites)
+            
+            # Define the permissions for the bot in the user-specified channel
+            channel_permissions = nextcord.PermissionOverwrite(
+                read_messages=True,
+                read_message_history=True,
+                send_messages=True,
+                manage_messages=True,
+                add_reactions=True,
+                use_slash_commands=True
+            )
+            # Apply the permissions to the specified channel
+            await specified_channel.set_permissions(ctx.guild.me, overwrite=channel_permissions)
+            
+            await ctx.send(f"Bot's permissions have been set up for {specified_channel.mention}. The bot is now blind to all other channels. Please manually remove the 'Administrator' permission from the bot's primary role is discord settings to complete the setup process.")
+        
+        except asyncio.TimeoutError:
+            await ctx.send("You took too long to respond. Please use the command again and provide the channel.")
+        except Exception as e:
+            logging.error(f"Error executing !setup command: {e}")
+            await ctx.send("An unexpected error occurred. Please try again.")
+
+
+    
+    #################
+    # USER COMMANDS
+    #################
 
     @commands.command(name="fetch", help="Fetch the translation for a replied message")
     async def fetch_command(self, ctx):
@@ -40,6 +120,7 @@ class CommandsCog(commands.Cog):
         except Exception as e:
             logging.error(f"Error executing !fetch command: {e}")
             await ctx.send("An error occurred. Please try again later.")
+
 
     @commands.command(name="reply", help="Translate your reply to the language of the original message", guild_ids=MEMBER_GUILDS)
     async def reply_command(self, ctx, *, user_reply: str):

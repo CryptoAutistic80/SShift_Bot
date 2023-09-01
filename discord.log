@@ -1206,3 +1206,93 @@
 [2023-09-01 12:16:14,273] INFO: Loaded cog: cogs.app_commands
 [2023-09-01 12:16:17,256] INFO: Logged in as SShift Bot!
 [2023-09-01 12:16:17,256] INFO: Logged in as SShift Bot!
+[2023-09-01 12:38:18,952] INFO: Loaded cog: cogs.translator
+[2023-09-01 12:38:18,952] INFO: Loaded cog: cogs.translator
+[2023-09-01 12:38:18,953] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 12:38:18,953] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 12:38:18,956] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 12:38:18,956] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 12:38:18,959] INFO: Loaded cog: cogs.commands
+[2023-09-01 12:38:18,959] INFO: Loaded cog: cogs.commands
+[2023-09-01 12:38:21,985] INFO: Logged in as SShift Bot!
+[2023-09-01 12:38:21,985] INFO: Logged in as SShift Bot!
+[2023-09-01 12:51:48,435] INFO: Loaded cog: cogs.translator
+[2023-09-01 12:51:48,435] INFO: Loaded cog: cogs.translator
+[2023-09-01 12:51:48,437] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 12:51:48,437] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 12:51:48,439] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 12:51:48,439] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 12:51:48,443] INFO: Loaded cog: cogs.commands
+[2023-09-01 12:51:48,443] INFO: Loaded cog: cogs.commands
+[2023-09-01 12:51:51,265] INFO: Logged in as SShift Bot!
+[2023-09-01 12:51:51,265] INFO: Logged in as SShift Bot!
+[2023-09-01 13:06:20,163] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:06:20,163] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:06:20,164] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:06:20,164] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:06:20,167] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:06:20,167] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:06:20,173] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:06:20,173] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:06:23,295] INFO: Logged in as SShift Bot!
+[2023-09-01 13:06:23,295] INFO: Logged in as SShift Bot!
+[2023-09-01 13:12:00,247] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:12:00,247] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:12:00,248] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:12:00,248] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:12:00,249] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:12:00,249] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:12:00,252] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:12:00,252] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:12:03,160] INFO: Logged in as SShift Bot!
+[2023-09-01 13:12:03,160] INFO: Logged in as SShift Bot!
+[2023-09-01 13:23:22,294] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:23:22,294] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:23:22,295] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:23:22,295] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:23:22,297] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:23:22,297] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:23:22,300] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:23:22,300] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:23:25,177] INFO: Logged in as SShift Bot!
+[2023-09-01 13:23:25,177] INFO: Logged in as SShift Bot!
+[2023-09-01 13:42:12,143] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:42:12,143] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:42:12,144] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:42:12,144] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:42:12,146] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:42:12,146] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:42:12,149] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:42:12,149] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:42:15,587] INFO: Logged in as SShift Bot!
+[2023-09-01 13:42:15,587] INFO: Logged in as SShift Bot!
+[2023-09-01 13:48:40,985] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:48:40,985] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:48:40,986] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:48:40,986] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:48:40,988] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:48:40,988] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:48:40,991] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:48:40,991] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:48:43,925] INFO: Logged in as SShift Bot!
+[2023-09-01 13:48:43,925] INFO: Logged in as SShift Bot!
+[2023-09-01 13:59:25,861] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:59:25,861] INFO: Loaded cog: cogs.translator
+[2023-09-01 13:59:25,862] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:59:25,862] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 13:59:25,863] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:59:25,863] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 13:59:25,867] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:59:25,867] INFO: Loaded cog: cogs.commands
+[2023-09-01 13:59:28,897] INFO: Logged in as SShift Bot!
+[2023-09-01 13:59:28,897] INFO: Logged in as SShift Bot!
+[2023-09-01 14:21:10,528] INFO: Loaded cog: cogs.translator
+[2023-09-01 14:21:10,528] INFO: Loaded cog: cogs.translator
+[2023-09-01 14:21:10,532] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 14:21:10,532] INFO: Loaded cog: cogs.message_commands
+[2023-09-01 14:21:10,535] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 14:21:10,535] INFO: Loaded cog: cogs.app_commands
+[2023-09-01 14:21:10,541] INFO: Loaded cog: cogs.commands
+[2023-09-01 14:21:10,541] INFO: Loaded cog: cogs.commands
+[2023-09-01 14:21:13,692] INFO: Logged in as SShift Bot!
+[2023-09-01 14:21:13,692] INFO: Logged in as SShift Bot!
