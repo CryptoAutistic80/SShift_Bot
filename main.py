@@ -33,7 +33,7 @@ from src.utils import get_member_guilds
 openai.api_key = os.environ['Key_OpenAI']
 
 # Set Constants
-TRANSLATOR_MODEL = "gpt-3.5-turbo"
+TRANSLATOR_MODEL = "gpt-4"
 
 # Initialize MEMBER_GUILDS
 MEMBER_GUILDS = get_member_guilds()
