@@ -78,35 +78,53 @@ async def retrieve_translation_by_original_message_id(guild_id, original_message
         print(f"Database error: {e}")
 
 async def add_guild(guild_id, guild_name, membership_type, expiry_date, subscription_active):
-    """Insert a new guild membership into the database."""
+    """Insert a new guild membership into the database or return an error if it already exists."""
     try:
         async with aiosqlite.connect(db_path) as db:
             cursor = await db.cursor()
+            
+            # Check if the guild_id already exists in the database
+            await cursor.execute("SELECT 1 FROM guild_memberships WHERE guild_id = ?", (guild_id,))
+            existing_guild = await cursor.fetchone()
+            
+            if existing_guild:
+                return "Guild already exists in the database"
+            
+            # Insert the new guild membership
             await cursor.execute(
                 "INSERT INTO guild_memberships (guild_id, guild_name, membership_type, expiry_date, subscription_active) VALUES (?, ?, ?, ?, ?)", 
                 (guild_id, guild_name, membership_type, expiry_date, subscription_active))
             await db.commit()
+            return "Guild successfully added to the database"
     except aiosqlite.Error as e:
-        print(f"Database error: {e}")
+        return f"Database error: {e}"
 
 async def remove_guild(guild_id):
-    """Remove a guild membership from the database based on the guild_id."""
+    """Remove a guild membership from the database based on the guild_id and return feedback on the operation."""
     try:
         async with aiosqlite.connect(db_path) as db:
             cursor = await db.cursor()
             await cursor.execute("DELETE FROM guild_memberships WHERE guild_id = ?", (guild_id,))
+            
+            # Check if any row was deleted without using await
+            changes = db.total_changes
             await db.commit()
+            
+            if changes > 0:
+                return "Guild successfully removed from the database"
+            else:
+                return "Guild not found in the database"
     except aiosqlite.Error as e:
-        print(f"Database error: {e}")
+        return f"Database error: {e}"
 
-async def edit_guild(guild_id, guild_name, membership_type, expiry_date, subscription_active):
+async def edit_guild(guild_id, membership_type, expiry_date, subscription_active):
     """Update an existing guild membership's details based on the guild_id."""
     try:
         async with aiosqlite.connect(db_path) as db:
             cursor = await db.cursor()
             await cursor.execute(
-                "UPDATE guild_memberships SET guild_name = ?, membership_type = ?, expiry_date = ?, subscription_active = ? WHERE guild_id = ?", 
-                (guild_name, membership_type, expiry_date, subscription_active, guild_id))
+                "UPDATE guild_memberships SET membership_type = ?, expiry_date = ?, subscription_active = ? WHERE guild_id = ?", 
+                (membership_type, expiry_date, subscription_active, guild_id))
             await db.commit()
     except aiosqlite.Error as e:
         print(f"Database error: {e}")

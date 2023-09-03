@@ -1,10 +1,12 @@
 import nextcord
 import openai
-import json
 from nextcord.ext import commands
+from nextcord import SlashOption
 from src.lang_processing import is_english, preprocess_message, should_translate
+from database.database_manager import add_guild as db_add_guild, remove_guild as db_remove_guild
 from main import TRANSLATOR_MODEL
 from src.utils import update_guilds
+import time
 import logging
 
 class AppCommands(commands.Cog):
@@ -36,7 +38,29 @@ class AppCommands(commands.Cog):
             logging.error(f"Error executing /admin command: {e}")
 
     @admin.subcommand(name="add_guild", description="Add a new guild to the allowed list")
-    async def add_guild(self, interaction: nextcord.Interaction, guild_name: str, guild_id: str):
+    async def add_guild(
+        self, 
+        interaction: nextcord.Interaction, 
+        guild_name: str, 
+        guild_id: str, 
+        date: str, 
+        membership_type: str = SlashOption(
+            name="membership_type",
+            choices={"Basic": "basic", "Premium": "premium", "VIP": "vip"},
+        ),
+        Subscription_Active: str = SlashOption(
+            name="subscription_status",
+            choices={"Yes": "yes", "No": "no"},
+        )
+    ):
+        # Convert human-readable date to Unix timestamp
+        try:
+            pattern = "%Y-%m-%d"
+            unix_timestamp = int(time.mktime(time.strptime(date, pattern)))
+        except ValueError:
+            await interaction.response.send_message("Invalid date format provided. Please use YYYY-MM-DD format.")
+            return
+    
         # Convert guild_id to an integer
         try:
             guild_id_int = int(guild_id)
@@ -44,27 +68,9 @@ class AppCommands(commands.Cog):
             await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
             return
     
-        # Read the current list of guilds from the JSON file
-        with open("json/member_guilds.json", "r") as file:
-            guilds = json.load(file)
-    
-        # Check if the guild_id already exists
-        if any(guild["guild_id"] == guild_id_int for guild in guilds):
-            await interaction.response.send_message(f"Guild with ID {guild_id} already exists in the list!")
-            return
-    
-        # Append the new guild data
-        guilds.append({
-            "guild_id": guild_id_int,
-            "guild_name": guild_name
-        })
-    
-        # Write the updated list back to the JSON file
-        with open("json/member_guilds.json", "w") as file:
-            json.dump(guilds, file, indent=4)
-    
-        await interaction.response.send_message(f"Guild {guild_name} with ID {guild_id} has been added!")
-        await update_guilds()
+        # Use the add_guild function from database_manager to add the guild to the database
+        response = await db_add_guild(guild_id_int, guild_name, membership_type, unix_timestamp, Subscription_Active)
+        await interaction.response.send_message(response)
     
     @admin.subcommand(name="remove_guild", description="Remove a guild from the allowed list")
     async def remove_guild(self, interaction: nextcord.Interaction, guild_id: str):
@@ -74,28 +80,12 @@ class AppCommands(commands.Cog):
         except ValueError:
             await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
             return
-    
-        # Read the current list of guilds from the JSON file
-        with open("json/member_guilds.json", "r") as file:
-            guilds = json.load(file)
-    
-        # Check if the guild_id exists
-        guild_to_remove = next((guild for guild in guilds if guild["guild_id"] == guild_id_int), None)
-    
-        if not guild_to_remove:
-            await interaction.response.send_message(f"Guild with ID {guild_id} does not exist in the list!")
-            return
-    
-        # Remove the guild data
-        guilds.remove(guild_to_remove)
-    
-        # Write the updated list back to the JSON file
-        with open("json/member_guilds.json", "w") as file:
-            json.dump(guilds, file, indent=4)
-    
-        await interaction.response.send_message(f"Guild with ID {guild_id} has been removed!")
-        await update_guilds()
-
+        
+        # Use the remove_guild function from database_manager to remove the guild from the database
+        response = await db_remove_guild(guild_id_int)
+        
+        # Send the feedback to the user
+        await interaction.response.send_message(response)
 
     #################
     # USER COMMANDS
