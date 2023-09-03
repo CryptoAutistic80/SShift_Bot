@@ -23,6 +23,7 @@ async def initialize_db():
             await cursor.execute("""
                 CREATE TABLE IF NOT EXISTS guild_memberships (
                     guild_id TEXT PRIMARY KEY NOT NULL,
+                    guild_name TEXT NOT NULL,
                     membership_type TEXT NOT NULL,
                     expiry_date DATETIME NOT NULL,
                     subscription_active BOOLEAN NOT NULL
@@ -76,14 +77,14 @@ async def retrieve_translation_by_original_message_id(guild_id, original_message
     except aiosqlite.Error as e:
         print(f"Database error: {e}")
 
-async def add_guild(guild_id, membership_type, expiry_date, subscription_active):
+async def add_guild(guild_id, guild_name, membership_type, expiry_date, subscription_active):
     """Insert a new guild membership into the database."""
     try:
         async with aiosqlite.connect(db_path) as db:
             cursor = await db.cursor()
             await cursor.execute(
-                "INSERT INTO guild_memberships (guild_id, membership_type, expiry_date, subscription_active) VALUES (?, ?, ?, ?)", 
-                (guild_id, membership_type, expiry_date, subscription_active))
+                "INSERT INTO guild_memberships (guild_id, guild_name, membership_type, expiry_date, subscription_active) VALUES (?, ?, ?, ?, ?)", 
+                (guild_id, guild_name, membership_type, expiry_date, subscription_active))
             await db.commit()
     except aiosqlite.Error as e:
         print(f"Database error: {e}")
@@ -98,14 +99,14 @@ async def remove_guild(guild_id):
     except aiosqlite.Error as e:
         print(f"Database error: {e}")
 
-async def edit_guild(guild_id, membership_type, expiry_date, subscription_active):
+async def edit_guild(guild_id, guild_name, membership_type, expiry_date, subscription_active):
     """Update an existing guild membership's details based on the guild_id."""
     try:
         async with aiosqlite.connect(db_path) as db:
             cursor = await db.cursor()
             await cursor.execute(
-                "UPDATE guild_memberships SET membership_type = ?, expiry_date = ?, subscription_active = ? WHERE guild_id = ?", 
-                (membership_type, expiry_date, subscription_active, guild_id))
+                "UPDATE guild_memberships SET guild_name = ?, membership_type = ?, expiry_date = ?, subscription_active = ? WHERE guild_id = ?", 
+                (guild_name, membership_type, expiry_date, subscription_active, guild_id))
             await db.commit()
     except aiosqlite.Error as e:
         print(f"Database error: {e}")
@@ -120,9 +121,10 @@ async def retrieve_guild_membership(guild_id):
             if membership_details:
                 return {
                     "guild_id": membership_details[0],
-                    "membership_type": membership_details[1],
-                    "expiry_date": membership_details[2],
-                    "subscription_active": membership_details[3]
+                    "guild_name": membership_details[1],
+                    "membership_type": membership_details[2],
+                    "expiry_date": membership_details[3],
+                    "subscription_active": membership_details[4]
                 }
             return None
     except aiosqlite.Error as e:
