@@ -3,10 +3,11 @@ import openai
 from nextcord.ext import commands
 from nextcord import SlashOption
 from src.lang_processing import is_english, preprocess_message, should_translate
-from database.database_manager import add_guild as db_add_guild, remove_guild as db_remove_guild
+from database.database_manager import add_guild as db_add_guild, remove_guild as db_remove_guild, retrieve_guild_membership
 from main import TRANSLATOR_MODEL
 from src.utils import update_guilds
 import time
+from datetime import datetime
 import logging
 
 class AppCommands(commands.Cog):
@@ -43,24 +44,16 @@ class AppCommands(commands.Cog):
         interaction: nextcord.Interaction, 
         guild_name: str, 
         guild_id: str, 
-        date: str, 
+        days_subscribed: int, 
         membership_type: str = SlashOption(
             name="membership_type",
-            choices={"Basic": "basic", "Premium": "premium", "VIP": "vip"},
+            choices={"Basic": "basic", "Premium": "premium", "Free Trial": "free trial"},
         ),
         Subscription_Active: str = SlashOption(
             name="subscription_status",
             choices={"Yes": "yes", "No": "no"},
         )
     ):
-        # Convert human-readable date to Unix timestamp
-        try:
-            pattern = "%Y-%m-%d"
-            unix_timestamp = int(time.mktime(time.strptime(date, pattern)))
-        except ValueError:
-            await interaction.response.send_message("Invalid date format provided. Please use YYYY-MM-DD format.")
-            return
-    
         # Convert guild_id to an integer
         try:
             guild_id_int = int(guild_id)
@@ -68,10 +61,18 @@ class AppCommands(commands.Cog):
             await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
             return
     
-        # Use the add_guild function from database_manager to add the guild to the database
-        response = await db_add_guild(guild_id_int, guild_name, membership_type, unix_timestamp, Subscription_Active)
-        await interaction.response.send_message(response)
+        # Get the current timestamp and calculate the expiration timestamp
+        try:
+            current_timestamp = int(time.time())
+            expiration_timestamp = current_timestamp + (days_subscribed * 86400)  # 86400 seconds in a day
+        except ValueError:
+            await interaction.response.send_message("Invalid number of days provided. Please ensure it's a valid number.")
+            return
     
+        # Use the add_guild function to add the guild to the database or get an error message if it already exists
+        response = await db_add_guild(guild_id_int, guild_name, membership_type, expiration_timestamp, Subscription_Active)
+        await interaction.response.send_message(response)
+     
     @admin.subcommand(name="remove_guild", description="Remove a guild from the allowed list")
     async def remove_guild(self, interaction: nextcord.Interaction, guild_id: str):
         # Convert guild_id to an integer
@@ -86,6 +87,39 @@ class AppCommands(commands.Cog):
         
         # Send the feedback to the user
         await interaction.response.send_message(response)
+
+    @admin.subcommand(name="get_guild_info", description="Retrieve a guild's membership details")
+    async def get_guild_info(
+        self, 
+        interaction: nextcord.Interaction, 
+        guild_id: str
+    ):
+        # Convert guild_id to an integer
+        try:
+            guild_id_int = int(guild_id)
+        except ValueError:
+            await interaction.response.send_message("Invalid guild ID provided. Please ensure it's a valid number.")
+            return
+    
+        # Retrieve the guild's membership details from the database
+        membership_details = await retrieve_guild_membership(guild_id_int)
+        
+        if membership_details:
+            # Convert the expiry timestamp to a human-readable date and time
+            expiry_date = datetime.utcfromtimestamp(membership_details["expiry_date"]).strftime('%Y-%m-%d %H:%M:%S UTC')
+            
+            # Create a message embed to display the guild's membership details
+            embed = nextcord.Embed(title="**Guild Membership Details**", description="\n\n", color=0x00ff00)
+            embed.add_field(name="**Guild Name**", value=f"*{membership_details['guild_name']}*\n\u200B", inline=False)
+            embed.add_field(name="**Guild ID**", value=f"*{membership_details['guild_id']}*\n\u200B", inline=False)
+            embed.add_field(name="**Membership Type**", value=f"*{membership_details['membership_type']}*\n\u200B", inline=False)
+            embed.add_field(name="**Expiration Date**", value=f"*{expiry_date}*\n\u200B", inline=False)
+            embed.add_field(name="**Subscription Active**", value=f"*{membership_details['subscription_active']}*\n\u200B", inline=False)
+            
+            # Send the embed message
+            await interaction.response.send_message(embed=embed)
+        else:
+            await interaction.response.send_message("No membership details found for the provided guild ID.")
 
     #################
     # USER COMMANDS
