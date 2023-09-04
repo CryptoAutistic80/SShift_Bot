@@ -109,7 +109,7 @@ class AppCommands(commands.Cog):
             expiry_date = datetime.utcfromtimestamp(membership_details["expiry_date"]).strftime('%Y-%m-%d %H:%M:%S UTC')
             
             # Create a message embed to display the guild's membership details
-            embed = nextcord.Embed(title="**Guild Membership Details**", description="\n\n", color=0x00ff00)
+            embed = nextcord.Embed(title="Guild Membership Details", color=0x00ff00)
             embed.add_field(name="**Guild Name**", value=f"*{membership_details['guild_name']}*\n\u200B", inline=False)
             embed.add_field(name="**Guild ID**", value=f"*{membership_details['guild_id']}*\n\u200B", inline=False)
             embed.add_field(name="**Membership Type**", value=f"*{membership_details['membership_type']}*\n\u200B", inline=False)

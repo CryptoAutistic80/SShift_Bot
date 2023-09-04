@@ -2788,3 +2788,233 @@
 [2023-09-04 21:18:54,699] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
 [2023-09-04 21:18:54,699] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
 [2023-09-04 21:18:54,699] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,836] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,863] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,863] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,865] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:20:07,865] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:20:07,867] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,867] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,870] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,870] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,940] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:20:07,940] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:20:07,946] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,946] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,946] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,948] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,948] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,948] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,950] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,950] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,950] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,953] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,953] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,953] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,956] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,956] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,956] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,962] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,962] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,962] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,962] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:07,965] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,965] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,965] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,965] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,968] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,968] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,968] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,968] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:07,970] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,970] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,970] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,970] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:07,974] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,974] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,974] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:07,974] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,347] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,358] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,358] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,359] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:20:29,359] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:20:29,361] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,361] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,363] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,363] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,422] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:20:29,422] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:20:29,425] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,425] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,425] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,427] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,427] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,427] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,430] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,430] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,430] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,432] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,432] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,432] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,433] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,433] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,433] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,436] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,436] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,436] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,436] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:20:29,437] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,437] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,437] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,437] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,439] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,439] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,439] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,439] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:20:29,441] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,441] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,441] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,441] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:20:29,442] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,442] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,442] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:20:29,442] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,799] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,813] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,813] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,815] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:24:46,815] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:24:46,817] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,817] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,821] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,821] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,899] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:24:46,899] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:24:46,902] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,902] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,902] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,904] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,904] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,904] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,907] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,907] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,907] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,909] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,909] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,909] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,910] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,910] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,910] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,912] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,912] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,912] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,912] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:24:46,914] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,914] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,914] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,914] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,916] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,916] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,916] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,916] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:24:46,918] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,918] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,918] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,918] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:24:46,918] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,918] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,918] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:24:46,918] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,208] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,223] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,223] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,224] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:25:26,224] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:25:26,226] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,226] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,228] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,228] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,312] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:25:26,312] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:25:26,316] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,316] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,316] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,317] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,317] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,317] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,320] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,320] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,320] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,323] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,323] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,323] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,324] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,324] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,324] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,330] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,330] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,330] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,330] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:25:26,331] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,331] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,331] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,331] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,333] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,333] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,333] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,333] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:25:26,335] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,335] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,335] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,335] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:25:26,336] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,336] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,336] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:25:26,336] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,520] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,533] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,533] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,534] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:31:29,534] INFO: Loaded cog: cogs.translator
+[2023-09-04 22:31:29,536] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,536] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,538] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,538] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,622] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:31:29,622] ERROR: Failed to load cog: cogs.translator. Error: 'cogs.translator'
+[2023-09-04 22:31:29,625] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,625] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,625] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,627] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,627] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,627] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,630] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,630] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,630] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,632] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,632] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,632] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,635] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,635] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,635] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,643] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,643] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,643] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,643] INFO: Loaded cog: cogs.message_commands
+[2023-09-04 22:31:29,645] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,645] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,645] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,645] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,647] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,647] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,647] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,647] INFO: Loaded cog: cogs.commands
+[2023-09-04 22:31:29,649] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,649] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,649] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,649] INFO: Loaded cog: cogs.app_commands
+[2023-09-04 22:31:29,650] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,650] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,650] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
+[2023-09-04 22:31:29,650] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Event loop is closed
