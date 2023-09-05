@@ -29,6 +29,7 @@ from server import start_server
 from database.database_manager import initialize_db
 from src.utils import get_member_guilds
 
+
 # Initialize the OpenAI API
 openai.api_key = os.environ['Key_OpenAI']
 
