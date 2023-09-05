@@ -3168,3 +3168,336 @@
 [2023-09-05 10:05:13,375] INFO: Loaded cog: cogs.app_commands
 [2023-09-05 10:05:19,791] INFO: Logged in as SShift Bot!
 [2023-09-05 10:05:19,791] INFO: Logged in as SShift Bot!
+[2023-09-05 12:01:16,874] INFO: Logged in as SShift Bot!
+[2023-09-05 12:01:16,880] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:01:16,904] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,904] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,914] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,914] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,914] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,922] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,922] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,922] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:01:16,922] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:02:59,934] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:02:59,947] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:02:59,947] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:02:59,949] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:02:59,949] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:02:59,950] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:02:59,950] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:02:59,952] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:02:59,952] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:03:04,848] INFO: Logged in as SShift Bot!
+[2023-09-05 12:03:04,848] INFO: Logged in as SShift Bot!
+[2023-09-05 12:04:00,883] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:04:00,910] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:04:00,910] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:04:00,912] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:04:00,912] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:04:00,913] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:04:00,913] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:04:00,916] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:04:00,916] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:04:05,658] INFO: Logged in as SShift Bot!
+[2023-09-05 12:04:05,658] INFO: Logged in as SShift Bot!
+[2023-09-05 12:07:16,287] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:07:16,301] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:07:16,301] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:07:16,303] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:07:16,303] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:07:16,305] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:07:16,305] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:07:16,308] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:07:16,308] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:07:20,354] INFO: Logged in as SShift Bot!
+[2023-09-05 12:07:20,354] INFO: Logged in as SShift Bot!
+[2023-09-05 12:07:20,358] ERROR: An error occurred while retrieving guild IDs: module 'logger' has no attribute 'info'
+[2023-09-05 12:07:20,358] ERROR: An error occurred while retrieving guild IDs: module 'logger' has no attribute 'info'
+[2023-09-05 12:08:23,005] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:08:23,019] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:08:23,019] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:08:23,021] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:08:23,021] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:08:23,022] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:08:23,022] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:08:23,024] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:08:23,024] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:08:26,997] INFO: Logged in as SShift Bot!
+[2023-09-05 12:08:26,997] INFO: Logged in as SShift Bot!
+[2023-09-05 12:08:27,005] INFO: Retrieved guild IDs: []
+[2023-09-05 12:08:27,005] INFO: Retrieved guild IDs: []
+[2023-09-05 12:11:27,515] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:11:27,528] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:11:27,528] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:11:27,530] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:11:27,530] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:11:27,532] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:11:27,532] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:11:27,539] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:11:27,539] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:11:32,608] INFO: Logged in as SShift Bot!
+[2023-09-05 12:11:32,608] INFO: Logged in as SShift Bot!
+[2023-09-05 12:11:32,612] INFO: Retrieved guild IDs: []
+[2023-09-05 12:11:32,612] INFO: Retrieved guild IDs: []
+[2023-09-05 12:15:53,172] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:15:53,186] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:15:53,186] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:15:53,188] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:15:53,188] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:15:53,190] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:15:53,190] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:15:53,193] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:15:53,193] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:15:57,328] INFO: Logged in as SShift Bot!
+[2023-09-05 12:15:57,328] INFO: Logged in as SShift Bot!
+[2023-09-05 12:15:57,331] INFO: Retrieved guild IDs from database: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:15:57,331] INFO: Retrieved guild IDs from database: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:15:57,332] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:15:57,332] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:17:41,535] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:17:41,549] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:17:41,550] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:17:41,552] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:17:41,554] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:17:46,381] INFO: Logged in as SShift Bot!
+[2023-09-05 12:17:46,384] INFO: Retrieved guild IDs from database: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:17:46,385] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:19:31,026] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:19:31,039] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:19:31,040] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:19:31,042] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:19:31,044] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:19:36,014] INFO: Logged in as SShift Bot!
+[2023-09-05 12:19:36,018] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:20:40,995] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:20:41,014] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:20:41,015] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:20:41,017] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:20:41,025] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:20:45,072] INFO: Logged in as SShift Bot!
+[2023-09-05 12:20:45,076] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:22:42,052] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:22:42,065] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:22:42,065] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:22:42,067] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:22:42,067] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:22:42,069] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:22:42,069] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:22:42,072] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:22:42,072] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:22:46,529] INFO: Logged in as SShift Bot!
+[2023-09-05 12:22:46,529] INFO: Logged in as SShift Bot!
+[2023-09-05 12:30:08,338] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:30:08,363] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:30:08,372] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:30:08,374] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:30:08,376] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:30:13,365] INFO: Logged in as SShift Bot!
+[2023-09-05 12:30:13,370] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:30:13,370] INFO: MEMBER_GUILDS populated: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:37:30,115] INFO: Logged in as SShift Bot!
+[2023-09-05 12:37:30,119] INFO: Retrieved guild IDs: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:37:30,119] INFO: MEMBER_GUILDS populated: ['1098355558022656091', '1038228981788442744', '1099667794016092210', '1059332099515093053', '1124052286155534437', '1081674998256775239', '1061371617621581854']
+[2023-09-05 12:37:30,121] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:37:30,135] ERROR: Failed to load cog: cogs.translator. Error: Extension 'cogs.translator' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:37:30,144] ERROR: Failed to load cog: cogs.commands. Error: Extension 'cogs.commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:37:30,148] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: RuntimeError: Cannot close a running event loop
+[2023-09-05 12:38:57,595] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:38:57,610] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:38:57,610] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 12:38:57,611] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:38:57,611] INFO: Loaded cog: cogs.translator
+[2023-09-05 12:38:57,613] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:38:57,613] INFO: Loaded cog: cogs.commands
+[2023-09-05 12:38:57,615] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:38:57,615] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 12:39:02,600] INFO: Logged in as SShift Bot!
+[2023-09-05 12:39:02,600] INFO: Logged in as SShift Bot!
+[2023-09-05 14:02:42,494] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 14:02:42,510] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 14:02:42,510] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 14:02:42,515] INFO: Loaded cog: cogs.translator
+[2023-09-05 14:02:42,515] INFO: Loaded cog: cogs.translator
+[2023-09-05 14:02:42,521] INFO: Loaded cog: cogs.commands
+[2023-09-05 14:02:42,521] INFO: Loaded cog: cogs.commands
+[2023-09-05 14:02:42,529] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 14:02:42,529] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 14:02:42,530] ERROR: Failed to load cog: cogs.membership_manager. Error: Extension 'cogs.membership_manager' raised an error: ImportError: cannot import name 'update_member_guilds' from partially initialized module 'main' (most likely due to a circular import) (/home/runner/SShift-Bot/main.py)
+[2023-09-05 14:02:42,530] ERROR: Failed to load cog: cogs.membership_manager. Error: Extension 'cogs.membership_manager' raised an error: ImportError: cannot import name 'update_member_guilds' from partially initialized module 'main' (most likely due to a circular import) (/home/runner/SShift-Bot/main.py)
+[2023-09-05 14:02:47,164] INFO: Logged in as SShift Bot!
+[2023-09-05 14:02:47,164] INFO: Logged in as SShift Bot!
+[2023-09-05 15:26:22,729] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:26:22,834] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:26:22,834] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:26:22,835] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:26:22,835] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:26:22,837] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:26:22,837] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:26:22,840] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:26:22,840] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:26:22,841] ERROR: Failed to load cog: cogs.membership_manager. Error: Extension 'cogs.membership_manager' raised an error: ImportError: cannot import name 'update_member_guilds' from partially initialized module 'main' (most likely due to a circular import) (/home/runner/SShift-Bot/main.py)
+[2023-09-05 15:26:22,841] ERROR: Failed to load cog: cogs.membership_manager. Error: Extension 'cogs.membership_manager' raised an error: ImportError: cannot import name 'update_member_guilds' from partially initialized module 'main' (most likely due to a circular import) (/home/runner/SShift-Bot/main.py)
+[2023-09-05 15:26:26,993] INFO: Logged in as SShift Bot!
+[2023-09-05 15:26:26,993] INFO: Logged in as SShift Bot!
+[2023-09-05 15:38:43,878] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:38:43,894] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:38:43,894] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:38:43,896] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:38:43,896] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:38:43,898] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:38:43,898] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:38:43,900] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:38:43,900] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:38:43,903] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:38:43,903] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:38:48,701] INFO: Logged in as SShift Bot!
+[2023-09-05 15:38:48,701] INFO: Logged in as SShift Bot!
+[2023-09-05 15:40:28,265] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:40:28,268] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:40:28,268] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:40:28,271] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:40:28,271] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:40:28,285] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:40:28,285] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:40:28,287] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:40:28,287] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:40:28,295] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:40:28,295] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:40:33,189] INFO: Logged in as SShift Bot!
+[2023-09-05 15:40:33,189] INFO: Logged in as SShift Bot!
+[2023-09-05 15:46:26,669] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:46:26,671] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:46:26,671] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:46:26,672] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:46:26,672] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:46:26,686] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:46:26,686] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:46:26,689] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:46:26,689] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:46:26,690] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:46:26,690] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:46:30,515] INFO: Logged in as SShift Bot!
+[2023-09-05 15:46:30,515] INFO: Logged in as SShift Bot!
+[2023-09-05 15:48:19,029] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:48:19,032] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:48:19,032] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:48:19,034] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:48:19,034] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:48:19,044] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:48:19,044] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:48:19,047] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:48:19,047] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:48:19,048] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:48:19,048] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:48:23,381] INFO: Logged in as SShift Bot!
+[2023-09-05 15:48:23,381] INFO: Logged in as SShift Bot!
+[2023-09-05 15:53:49,186] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:53:49,187] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:53:49,202] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:53:49,202] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:53:49,205] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:53:49,205] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:53:49,208] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:53:49,208] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:53:49,213] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:53:49,213] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:53:49,217] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:53:49,217] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:53:53,894] INFO: Logged in as SShift Bot!
+[2023-09-05 15:53:53,894] INFO: Logged in as SShift Bot!
+[2023-09-05 15:56:02,284] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:56:02,299] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:56:02,299] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 15:56:02,301] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:56:02,301] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 15:56:02,302] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:56:02,302] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 15:56:02,306] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:56:02,306] INFO: Loaded cog: cogs.translator
+[2023-09-05 15:56:02,310] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:56:02,310] INFO: Loaded cog: cogs.commands
+[2023-09-05 15:56:06,168] INFO: Logged in as SShift Bot!
+[2023-09-05 15:56:06,168] INFO: Logged in as SShift Bot!
+[2023-09-05 16:01:05,449] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:01:05,465] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:01:05,465] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:01:05,467] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:01:05,467] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:01:05,468] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:01:05,468] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:01:05,470] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:01:05,470] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:01:05,474] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:01:05,474] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:01:09,294] INFO: Logged in as SShift Bot!
+[2023-09-05 16:01:09,294] INFO: Logged in as SShift Bot!
+[2023-09-05 16:03:42,997] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:03:43,019] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:03:43,019] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:03:43,022] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:03:43,022] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:03:43,024] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:03:43,024] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:03:43,026] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:03:43,026] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:03:43,031] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:03:43,031] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:03:47,716] INFO: Logged in as SShift Bot!
+[2023-09-05 16:03:47,716] INFO: Logged in as SShift Bot!
+[2023-09-05 16:06:37,303] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:06:37,304] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:06:37,318] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:06:37,318] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:06:37,319] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:06:37,319] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:06:37,322] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:06:37,322] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:06:37,325] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:06:37,325] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:06:37,328] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:06:37,328] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:06:41,209] INFO: Logged in as SShift Bot!
+[2023-09-05 16:06:41,209] INFO: Logged in as SShift Bot!
+[2023-09-05 16:12:32,832] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:12:32,833] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:12:32,846] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:12:32,846] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:12:32,847] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:12:32,847] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:12:32,849] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:12:32,849] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:12:32,851] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:12:32,851] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:12:32,854] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:12:32,854] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:12:37,350] INFO: Logged in as SShift Bot!
+[2023-09-05 16:12:37,350] INFO: Logged in as SShift Bot!
+[2023-09-05 16:19:42,434] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:19:42,437] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:19:42,451] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:19:42,451] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:19:42,454] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:19:42,454] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:19:42,455] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: ImportError: cannot import name 'update_guilds' from 'src.utils' (/home/runner/SShift-Bot/src/utils.py)
+[2023-09-05 16:19:42,455] ERROR: Failed to load cog: cogs.app_commands. Error: Extension 'cogs.app_commands' raised an error: ImportError: cannot import name 'update_guilds' from 'src.utils' (/home/runner/SShift-Bot/src/utils.py)
+[2023-09-05 16:19:42,459] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:19:42,459] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:19:42,464] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:19:42,464] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:19:47,391] INFO: Logged in as SShift Bot!
+[2023-09-05 16:19:47,391] INFO: Logged in as SShift Bot!
+[2023-09-05 16:20:17,876] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:20:17,877] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:20:17,891] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:20:17,891] INFO: Loaded cog: cogs.membership_manager
+[2023-09-05 16:20:17,892] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:20:17,892] INFO: Loaded cog: cogs.message_commands
+[2023-09-05 16:20:17,894] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:20:17,894] INFO: Loaded cog: cogs.translator
+[2023-09-05 16:20:17,896] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:20:17,896] INFO: Loaded cog: cogs.commands
+[2023-09-05 16:20:17,900] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:20:17,900] INFO: Loaded cog: cogs.app_commands
+[2023-09-05 16:20:22,038] INFO: Logged in as SShift Bot!
+[2023-09-05 16:20:22,038] INFO: Logged in as SShift Bot!

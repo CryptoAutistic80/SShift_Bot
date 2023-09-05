@@ -5,7 +5,6 @@ from nextcord import SlashOption
 from src.lang_processing import is_english, preprocess_message, should_translate
 from database.database_manager import add_guild as db_add_guild, remove_guild as db_remove_guild, retrieve_guild_membership
 from main import TRANSLATOR_MODEL
-from src.utils import update_guilds
 import time
 from datetime import datetime
 import logging

@@ -1,16 +1,21 @@
-import json
 import logging
 
 logger = logging.getLogger('discord')
 
-def get_member_guilds():
-    """Load guilds from the member_guilds.json file."""
-    with open('json/member_guilds.json', 'r') as f:
-        guilds_data = json.load(f)
-    return [guild['guild_id'] for guild in guilds_data]
+class MemberGuilds:
+    def __init__(self):
+        self.guild_list = []
 
-async def update_guilds():
-    global MEMBER_GUILDS
-    logger.info("Updating MEMBER_GUILDS...")
-    MEMBER_GUILDS = get_member_guilds()
-    logger.info("MEMBER_GUILDS has been updated.")
+    def update(self, new_list):
+        self.guild_list = new_list
+        print(f"utils.py: MEMBER_GUILDS updated: {self.guild_list}")  # Add this line to check the update
+
+    def get(self):
+        return self.guild_list
+
+# Create a single instance of MemberGuilds
+MEMBER_GUILDS = MemberGuilds()
+
+
+
+

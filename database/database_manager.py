@@ -153,7 +153,7 @@ async def retrieve_active_subscriptions():
     try:
         async with aiosqlite.connect(db_path) as db:
             cursor = await db.cursor()
-            await cursor.execute("SELECT guild_id FROM guild_memberships WHERE subscription_active = 1")
+            await cursor.execute("SELECT guild_id FROM guild_memberships WHERE subscription_active = 'yes'")
             active_guilds = await cursor.fetchall()
             return [guild[0] for guild in active_guilds]
     except aiosqlite.Error as e:

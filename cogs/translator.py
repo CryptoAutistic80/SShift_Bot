@@ -13,7 +13,7 @@ from src.discord_ui import (
     TranslationView
 )
 from datetime import datetime
-from main import MEMBER_GUILDS
+from src.utils import MEMBER_GUILDS
 
 class TranslationCog(commands.Cog):
     def __init__(self, bot):
@@ -56,8 +56,15 @@ class TranslationCog(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message):
         # Check if the message's guild is in MEMBER_GUILDS
-        if message.guild and message.guild.id not in MEMBER_GUILDS:
-            return  # Do not proceed if it's not in MEMBER_GUILDS
+        if message.guild:
+            print(f"Received message from guild ID: {message.guild.id}")  # Debugging output
+            print(f"Current MEMBER_GUILDS: {MEMBER_GUILDS.get()}")  # Debugging output using the get method of MEMBER_GUILDS
+            
+            if str(message.guild.id) not in MEMBER_GUILDS.get():  # Ensuring ID formats match and using the get method to access the list
+                print(f"Guild ID {message.guild.id} not in MEMBER_GUILDS")  # Debugging output
+                return  # Do not proceed if it's not in MEMBER_GUILDS
+        else:
+            return  # Ignore messages that are not from a guild
     
         if not message.author.bot:
             dummy_view = TranslationView(self, message_id=message.id)

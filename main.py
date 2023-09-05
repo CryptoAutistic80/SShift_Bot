@@ -27,7 +27,6 @@ import openai
 from nextcord.ext import commands
 from server import start_server
 from database.database_manager import initialize_db
-from src.utils import get_member_guilds
 
 
 # Initialize the OpenAI API
@@ -35,9 +34,6 @@ openai.api_key = os.environ['Key_OpenAI']
 
 # Set Constants
 TRANSLATOR_MODEL = "gpt-4"
-
-# Initialize MEMBER_GUILDS
-MEMBER_GUILDS = get_member_guilds()
 
 def setup_logging():
     """Configure logging for the bot."""
@@ -59,9 +55,17 @@ def setup_logging():
 def load_cogs(bot, logger):
     """Load all cogs from the cogs directory."""
     cogs_directory = "cogs"
-    
+
+    # Load the MembershipManager cog first
+    try:
+        bot.load_extension(f"{cogs_directory}.membership_manager")
+        logger.info("Loaded cog: cogs.membership_manager")
+    except Exception as e:
+        logger.error(f"Failed to load cog: cogs.membership_manager. Error: {e}")
+
+    # Load the remaining cogs
     for filename in os.listdir(cogs_directory):
-        if filename.endswith(".py"):
+        if filename.endswith(".py") and filename != "membership_manager.py":
             cog_path = f"{cogs_directory}.{filename[:-3]}"  # Removes the .py extension
             try:
                 bot.load_extension(cog_path)
