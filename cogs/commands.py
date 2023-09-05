@@ -4,9 +4,7 @@ import logging
 from nextcord.ext import commands
 from database.database_manager import retrieve_translation_by_original_message_id
 from main import TRANSLATOR_MODEL
-from src.utils import MEMBER_GUILDS
 import asyncio
-
 
 class CommandsCog(commands.Cog):
     def __init__(self, bot):
@@ -113,6 +111,20 @@ class CommandsCog(commands.Cog):
     @commands.command(name="fetch", help="Fetch the translation for a replied message")
     async def fetch_command(self, ctx):
         """Fetch the translation for a replied message using traditional command"""
+    
+        # Get the MembershipManager cog and the guild_list
+        membership_manager_cog = self.bot.get_cog('MembershipManager')
+        if membership_manager_cog:
+            guild_list = membership_manager_cog.guild_list
+        else:
+            print("MembershipManager cog not found")
+            return
+    
+        # Ensure the command is used in a guild that is in the guild_list
+        if str(ctx.guild.id) not in guild_list:
+            await ctx.send("This command cannot be used in this guild.")
+            return
+    
         try:
             logging.info(f"!fetch command invoked by {ctx.author.name} ({ctx.author.id})")
             
@@ -134,9 +146,22 @@ class CommandsCog(commands.Cog):
             logging.error(f"Error executing !fetch command: {e}")
             await ctx.send("An error occurred. Please try again later.")
 
-
-    @commands.command(name="reply", help="Translate your reply to the language of the original message", guild_ids=MEMBER_GUILDS.get())
+  
+    @commands.command(name="reply", help="Translate your reply to the language of the original message")
     async def reply_command(self, ctx, *, user_reply: str):
+        # Get the MembershipManager cog and the guild_list
+        membership_manager_cog = self.bot.get_cog('MembershipManager')
+        if membership_manager_cog:
+            guild_list = membership_manager_cog.guild_list
+        else:
+            print("MembershipManager cog not found")
+            return
+    
+        # Ensure the command is used in a guild that is in the guild_list
+        if str(ctx.guild.id) not in guild_list:
+            await ctx.send("This command cannot be used in this guild.")
+            return
+    
         try:
             logging.info(f"!reply command invoked by {ctx.author.name} ({ctx.author.id})")
             

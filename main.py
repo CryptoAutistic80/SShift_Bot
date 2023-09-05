@@ -33,7 +33,7 @@ from database.database_manager import initialize_db
 openai.api_key = os.environ['Key_OpenAI']
 
 # Set Constants
-TRANSLATOR_MODEL = "gpt-4"
+TRANSLATOR_MODEL = "gpt-3.5-turbo"
 
 def setup_logging():
     """Configure logging for the bot."""
@@ -59,7 +59,6 @@ def load_cogs(bot, logger):
     # Load the MembershipManager cog first
     try:
         bot.load_extension(f"{cogs_directory}.membership_manager")
-        logger.info("Loaded cog: cogs.membership_manager")
     except Exception as e:
         logger.error(f"Failed to load cog: cogs.membership_manager. Error: {e}")
 
